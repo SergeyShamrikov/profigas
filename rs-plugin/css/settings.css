@@ -78,6 +78,13 @@ website:   	http://www.themepunch.com
 	color: #0c5288;
 }
 
+.slider1_box1{
+	width: 473px;
+	text-align: center;
+	padding: 8px 0px 9px 0px;
+	background:  url(../images/slider1_img5_bg.png) 0 0 no-repeat;
+}
+
 /*my settings end*/
 .fullwidthbanner-container{
 	top: 0;
@@ -610,8 +617,8 @@ website:   	http://www.themepunch.com
 
 .tp-bullets{
 	z-index:1000;
-	bottom: 0 !important;
-	left: 20% !important; 
+	bottom: 125px !important;
+	left: 18% !important; 
 	position:absolute;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	-moz-opacity: 1;
@@ -632,7 +639,7 @@ website:   	http://www.themepunch.com
 .tp-bullets.simplebullets.navbar-old					{ 	 background:url(../assets/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px ;}
 
 
-.tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	background:url(../assets/bullet.png) no-Repeat top left;	width:20px;	height:20px;  margin-right:0px; float:left; margin-top:-10px; margin-left:3px;}
+.tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	background:url(../assets/bullet.png) no-Repeat top left;	width:16px;	height:16px;  margin-right:0px; float:left; margin-top:-10px; margin-left:4px;}
 .tp-bullets.simplebullets.round .bullet.last			{	margin-right:3px;}
 
 .tp-bullets.simplebullets.round-old .bullet				{	cursor:pointer; position:relative;	background:url(../assets/bullets.png) no-Repeat bottom left;	width:23px;	height:23px;  margin-right:0px; float:left; margin-top:-12px;}

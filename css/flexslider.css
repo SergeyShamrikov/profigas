@@ -30,7 +30,7 @@
 	background-image: url();
 	background-repeat: no-repeat;
 	position: absolute; 
-	top: 30%; 
+	top: 23%; 
 	cursor: pointer; 
 	text-indent: -9999px;}
 .flex-direction-nav .flex-next {right: -30px;background-image: url(../images/hflex-next_bg.png); }

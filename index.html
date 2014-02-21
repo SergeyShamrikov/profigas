@@ -15,12 +15,22 @@
 	 <script src="js/jquery.flexslider.js"></script>
 	 <script src="js/jquery.easing.1.3.js"></script>
    <script src="js/modernizr.custom.79639.js"></script>
+   <script src="js/jquery.cycle.all.js"></script>
+
    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	 <script src="js/script.js"></script>
 	 <script>
+      $('#s2').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next2', 
+          prev:   '#prev2' 
+      });
 		  $(window).load(function() {
 				$('.flexslider').flexslider({
-				  animation: "slide"
+				  animation: "slide",
+          pauseOnHover: true
 				});
 			 });
       
@@ -164,93 +174,93 @@
           <li data-transition="PaperCut" data-slotamount="10" data-masterspeed="300" data-thumb="images/thumbs/thumb1.jpg">
                 <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                 <div class="caption randomrotate"
-                   data-x="20"
-                   data-y="25"
+                   data-x="110"
+                   data-y="180"
                    data-speed="1000"
                    data-start="200"
                    data-transition="slidedown"
                    data-easing="easeInOutExpo"><img src="images/slider1_img1.png" alt=""></div>
                 <!-- THE CAPTIONS IN THIS SLDIE -->
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="550"
-                   data-y="140"
+                   data-x="640"
+                   data-y="295"
                    data-speed="300"
                    data-start="500"
                    data-easing="easeInOutExpo"><img src="images/slider1_img2_2.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="570"
-                   data-y="135"
+                   data-x="660"
+                   data-y="290"
                    data-speed="700"
                    data-start="700"
                    data-easing="easeOutExpo"><img src="images/slider1_img2_1.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="586"
-                   data-y="168"
+                   data-x="676"
+                   data-y="323"
                    data-speed="600"
                    data-start="900"
                    data-easing="easeOutExpo"><img src="images/slider1_img2.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="580"
-                   data-y="222"
+                   data-x="670"
+                   data-y="382"
                    data-speed="600"
                    data-start="900"
                    data-easing="easeOutExpo"><span class="slider1_it1">Баллоны</span></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="725"
-                   data-y="120"
+                   data-x="815"
+                   data-y="265"
                    data-speed="300"
                    data-start="1300"
                    data-easing="easeOutExpo"><img src="images/slider1_img3_1.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="745"
-                   data-y="140"
+                   data-x="835"
+                   data-y="285"
                    data-speed="450"
                    data-start="1500"
                    data-easing="easeOutExpo"><img src="images/slider1_img3_2.png" alt=""></div>
 
                 <div class="caption slide_title bl_gray randomrotate"
-                   data-x="765"
-                   data-y="160"
+                   data-x="855"
+                   data-y="305"
                    data-speed="600"
                    data-start="1700"
                    data-easing="easeOutExpo"><img src="images/slider1_img3.png" alt=""></div>
 
                 <div class="caption slide_title bl_gray randomrotate"
-                   data-x="745"
-                   data-y="222"
+                   data-x="835"
+                   data-y="367"
                    data-speed="600"
                    data-start="1700"
                    data-easing="easeOutExpo"><span class="slider1_it1">Редукторы</span></div>
 
                 <div class="caption randomrotate"
-                   data-x="900"
-                   data-y="130"
+                   data-x="990"
+                   data-y="275"
                    data-speed="450"
                    data-start="2100"
                    data-easing="easeOutExpo"><img src="images/slider1_img4_1.png" alt=""></div>
 
                 <div class="caption randomrotate"
-                   data-x="930"
-                   data-y="160"
+                   data-x="1020"
+                   data-y="305"
                    data-speed="600"
                    data-start="2300"
                    data-easing="easeOutExpo"><img src="images/slider1_img4.png" alt=""></div>
 
                 <div class="caption randomrotate"
-                   data-x="896"
-                   data-y="222"
+                   data-x="986"
+                   data-y="367"
                    data-speed="600"
                    data-start="2300"
                    data-easing="easeOutExpo"><span class="slider1_it1">Электроника</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="520"
-                   data-y="13"
+                   data-x="615"
+                   data-y="168"
                    data-speed="600"
                    data-start="2700"
                    data-easing="easeOutExpo">
@@ -258,65 +268,62 @@
                 </div>
 
                 <div class="caption randomrotate fz_24 bl_gray lfl"
-                   data-x="570"
-                   data-y="45"
+                   data-x="660"
+                   data-y="195"
                    data-speed="600"
                    data-start="3600"
                    data-easing="easeOutExpo"><img src="images/slider1_logo.png" alt=""></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sft"
-                   data-x="755"
-                   data-y="45"
+                   data-x="845"
+                   data-y="195"
                    data-speed="600"
                    data-start="2900"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">Первый</h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sfr"
-                   data-x="755"
-                   data-y="70"
+                   data-x="845"
+                   data-y="225"
                    data-speed="600"
                    data-start="3100"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">интернет-магазин 
 </h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sfb"
-                   data-x="755"
-                   data-y="95"
+                   data-x="845"
+                   data-y="253"
                    data-speed="600"
                    data-start="3300"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">гбо</h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="570"
-                   data-y="255"
+                   data-x="660"
+                   data-y="400"
                    data-speed="600"
                    data-start="4500"
-                   data-easing="easeOutExpo"><img src="images/slider1_img5_bg.png" alt=""></div>
+                   data-easing="easeOutExpo">
+                    <div class="slider1_box1">
+                      <a href="#" class="slider1_lk1">Перейти на сайт интернет-магазина</a>
+                    </div>
+                   </div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="630"
-                   data-y="263"
-                   data-speed="600"
-                   data-start="4700"
-                   data-easing="easeOutExpo"><a href="#" class="slider1_lk1">Перейти на сайт интернет-магазина</a></div>
-
-                <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="503"
-                   data-y="305"
+                   data-x="593"
+                   data-y="460"
                    data-speed="600"
                    data-start="5300"
                    data-easing="easeOutExpo"><span class="slider1_it2">Узнай стоимость установки ГБО</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="650"
-                   data-y="340"
+                   data-x="720"
+                   data-y="495"
                    data-speed="600"
                    data-start="5500"
                    data-easing="easeOutExpo"><span class="slider1_it2">и экономию прямо здесь</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
                    data-x="1155"
-                   data-y="353"
+                   data-y="508"
                    data-speed="600"
                    data-start="6500"
                    data-easing="easeOutExpo"><img src="images/slider1_img6_arrow.png" alt=""></div>
@@ -327,93 +334,93 @@
           <li data-transition="PaperCut" data-slotamount="10" data-masterspeed="300" data-thumb="images/thumbs/thumb1.jpg">
                 <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                 <div class="caption randomrotate"
-                   data-x="20"
-                   data-y="25"
+                   data-x="110"
+                   data-y="180"
                    data-speed="1000"
                    data-start="200"
                    data-transition="slidedown"
                    data-easing="easeInOutExpo"><img src="images/slider1_img1.png" alt=""></div>
                 <!-- THE CAPTIONS IN THIS SLDIE -->
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="550"
-                   data-y="140"
+                   data-x="640"
+                   data-y="295"
                    data-speed="300"
                    data-start="500"
                    data-easing="easeInOutExpo"><img src="images/slider1_img2_2.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="570"
-                   data-y="135"
+                   data-x="660"
+                   data-y="290"
                    data-speed="700"
                    data-start="700"
                    data-easing="easeOutExpo"><img src="images/slider1_img2_1.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="586"
-                   data-y="168"
+                   data-x="676"
+                   data-y="323"
                    data-speed="600"
                    data-start="900"
                    data-easing="easeOutExpo"><img src="images/slider1_img2.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="580"
-                   data-y="222"
+                   data-x="670"
+                   data-y="382"
                    data-speed="600"
                    data-start="900"
                    data-easing="easeOutExpo"><span class="slider1_it1">Баллоны</span></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="725"
-                   data-y="120"
+                   data-x="815"
+                   data-y="265"
                    data-speed="300"
                    data-start="1300"
                    data-easing="easeOutExpo"><img src="images/slider1_img3_1.png" alt=""></div>
 
                 <div class="caption slide_title bold bl_gray sfb"
-                   data-x="745"
-                   data-y="140"
+                   data-x="835"
+                   data-y="285"
                    data-speed="450"
                    data-start="1500"
                    data-easing="easeOutExpo"><img src="images/slider1_img3_2.png" alt=""></div>
 
                 <div class="caption slide_title bl_gray randomrotate"
-                   data-x="765"
-                   data-y="160"
+                   data-x="855"
+                   data-y="305"
                    data-speed="600"
                    data-start="1700"
                    data-easing="easeOutExpo"><img src="images/slider1_img3.png" alt=""></div>
 
                 <div class="caption slide_title bl_gray randomrotate"
-                   data-x="745"
-                   data-y="222"
+                   data-x="835"
+                   data-y="367"
                    data-speed="600"
                    data-start="1700"
                    data-easing="easeOutExpo"><span class="slider1_it1">Редукторы</span></div>
 
                 <div class="caption randomrotate"
-                   data-x="900"
-                   data-y="130"
+                   data-x="990"
+                   data-y="275"
                    data-speed="450"
                    data-start="2100"
                    data-easing="easeOutExpo"><img src="images/slider1_img4_1.png" alt=""></div>
 
                 <div class="caption randomrotate"
-                   data-x="930"
-                   data-y="160"
+                   data-x="1020"
+                   data-y="305"
                    data-speed="600"
                    data-start="2300"
                    data-easing="easeOutExpo"><img src="images/slider1_img4.png" alt=""></div>
 
                 <div class="caption randomrotate"
-                   data-x="896"
-                   data-y="222"
+                   data-x="986"
+                   data-y="367"
                    data-speed="600"
                    data-start="2300"
                    data-easing="easeOutExpo"><span class="slider1_it1">Электроника</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="520"
-                   data-y="13"
+                   data-x="615"
+                   data-y="168"
                    data-speed="600"
                    data-start="2700"
                    data-easing="easeOutExpo">
@@ -421,70 +428,68 @@
                 </div>
 
                 <div class="caption randomrotate fz_24 bl_gray lfl"
-                   data-x="570"
-                   data-y="45"
+                   data-x="660"
+                   data-y="195"
                    data-speed="600"
                    data-start="3600"
                    data-easing="easeOutExpo"><img src="images/slider1_logo.png" alt=""></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sft"
-                   data-x="755"
-                   data-y="45"
+                   data-x="845"
+                   data-y="195"
                    data-speed="600"
                    data-start="2900"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">Первый</h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sfr"
-                   data-x="755"
-                   data-y="70"
+                   data-x="845"
+                   data-y="225"
                    data-speed="600"
                    data-start="3100"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">интернет-магазин 
 </h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray sfb"
-                   data-x="755"
-                   data-y="95"
+                   data-x="845"
+                   data-y="253"
                    data-speed="600"
                    data-start="3300"
                    data-easing="easeOutExpo"><h2 class="slider1_title1">гбо</h2></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="570"
-                   data-y="255"
+                   data-x="660"
+                   data-y="400"
                    data-speed="600"
                    data-start="4500"
-                   data-easing="easeOutExpo"><img src="images/slider1_img5_bg.png" alt=""></div>
+                   data-easing="easeOutExpo">
+                    <div class="slider1_box1">
+                      <a href="#" class="slider1_lk1">Перейти на сайт интернет-магазина</a>
+                    </div>
+                   </div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="630"
-                   data-y="263"
-                   data-speed="600"
-                   data-start="4700"
-                   data-easing="easeOutExpo"><a href="#" class="slider1_lk1">Перейти на сайт интернет-магазина</a></div>
-
-                <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="503"
-                   data-y="305"
+                   data-x="593"
+                   data-y="460"
                    data-speed="600"
                    data-start="5300"
                    data-easing="easeOutExpo"><span class="slider1_it2">Узнай стоимость установки ГБО</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
-                   data-x="650"
-                   data-y="340"
+                   data-x="720"
+                   data-y="495"
                    data-speed="600"
                    data-start="5500"
                    data-easing="easeOutExpo"><span class="slider1_it2">и экономию прямо здесь</span></div>
 
                 <div class="caption randomrotate fz_24 bl_gray"
                    data-x="1155"
-                   data-y="353"
+                   data-y="508"
                    data-speed="600"
                    data-start="6500"
                    data-easing="easeOutExpo"><img src="images/slider1_img6_arrow.png" alt=""></div>
                 
           </li> 
+
         </ul>
         <div class="tp-bannertimer tp-bottom"></div>
       </div>
@@ -502,7 +507,7 @@
           <ul class="cost_menu clearfix">
             <li class="cost_it"><a href="#" class="cost_lk cost_lk_first">Анкета</a></li>
             <li class="cost_it"><a href="#" class="cost_lk cost_lk_second">Комплектация ГБО</a></li>
-            <li class="cost_it"><a href="#" class="cost_lk cost_lk_last">Рассчет и заказ</a></li>
+            <li class="cost_it cost_it_last"><a href="#" class="cost_lk cost_lk_last">Рассчет и заказ</a></li>
           </ul>
         </div>
         <div class="cost_box_btn clearfix">
@@ -589,8 +594,32 @@
           <div class="flexslider wrapper">
             <ul class="slides">
               <li class="p_rel">
-                <figure >
-                  <img src="images/flexslider_img1.jpg" alt="">
+                <figure class="p_rel">
+                  <div id="s2" class="pics p_rel">
+                    <div>
+                      <img src="images/flexslider_img1.jpg">
+                      <p class="p_abs baner">
+                        <span>Audi A6 Allroad с установленным</span>
+                        <span>на СТО Профигаз ГБО 4-го поколения</span>
+                      </p>
+                    </div>
+                    <div>
+                      <img src="images/flexslider_img33.jpg">
+                      <p class="p_abs baner">
+                        <span>Audi A6 Allroad с установленным</span>
+                        <span>на СТО Профигаз ГБО 4-го поколения</span>
+                      </p>
+                    </div>
+                    <div>
+                      <img src="images/flexslider_img1.jpg">
+                      <p class="p_abs baner">
+                        <span>Audi A6 Allroad с установленным</span>
+                        <span>на СТО Профигаз ГБО 4-го поколения</span>
+                      </p>
+                    </div>
+                </div>
+                <div class="nav"><a id="prev2" href="#"><em></em></a> <a id="next2" href="#"><em></em></a></div>
+
 
                 </figure>
                 <blockquote class="quote_box p_rel clearfix">
@@ -617,20 +646,146 @@
       <div class="news_box">
         <h3 class="title2"><a href="">Новости</a></h3>
         <div class="clearfix">
-          <div class="grid4 news_it">
-            <figure class="video">
-              <img src="" alt="">
+          <div class="grid_4 news_it">
+            <figure class="video p_rel">
+              <img src="images/video_img.png" alt="">
+              <a href="#" class="p_abs news_icon video_ic">видео</a>
             </figure>
+            <div class="news_cont">
+              <h4 class="title3">Установка ГБО</h4>
+              <a href="#" class="news_lk">Смотреть видео</a>
+            </div>
           </div>
-          <div class="grid4 news_it"></div>
-          <div class="grid4 news_it"></div>
+          <div class="grid_4 news_it">
+            <figure class="news p_rel">
+              <img src="images/news_img.png" alt="">
+              <a href="#" class="p_abs news_icon news_ic">новость</a>
+            </figure>
+            <div class="news_cont">
+              <h4 class="title3">Новая программа лояльности!</h4>
+              <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
+                <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+              </p>
+              
+            </div>
+          </div>
+          <div class="grid_4 news_it">
+            <figure class="photo p_rel">
+              <img src="images/photo_img.png" alt="">
+              <a href="#" class="p_abs news_icon photo_ic">фотографии</a>
+            </figure>
+            <div class="news_cont">
+              <h4 class="title3">Audi A6 Allroad 2010</h4>
+              <a href="#" class="news_lk">Посмотреть галерею</a>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="achievements">
+        <h3 class="title4">Наши достижения</h3>
+        <div class="list1 clearfix">
+          <div class="grid_4">
+            <div class="clearfix column1">
+              <img src="images/car_icon.png" alt="" class="f_left">
+              <div class="box1 f_left">
+                <p>Автомобилей переоборудовано</p>
+                <span class="qt">15600</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="clearfix column2">
+              <img src="images/map_icon.png" alt="">
+              <div class="box1">
+                <p>Количество СТО в сети</p>
+                <span class="qt">1536</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="clearfix column3">
+              <img src="images/balon_icon.png" alt="" class="f_left">
+              <div class="box1 f_right">
+                <p>Размеров баллонов</p>
+                <span class="qt">2500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="equipment">
+        <h3 class="title4">Оборудование</h3>
+        <div class="wrapper">
+          <div class="grid_12">
+            <ul class="list clearfix">
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img1.png" height="34" width="114" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img2.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img3.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img4.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img5.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img6.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img7.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img8.png" alt=""></a>
+              </li>
+              <li class="list_item">
+                <a href="#" class="list_link"><img src="images/equipment_img9.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="description_box">
+        СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
+      </p>
     </div>
   </article>
   </section>
 <!--==============================footer=================================-->
   <footer>
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_12">
+          <ul class="footer_menu clearfix">
+            <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Вакансии</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container_12">
+        <div class="wrapper">
+          <div class="grid_12">
+            <b class="f_left">&copy; 2013 Профигаз. Все права защищены.</b>
+            <span class="developer f_right">
+              <a href="">Разработка сайта</a>
+              <span class="name">Павел Грубый</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <script>
         $(document).ready(function() {
@@ -638,8 +793,8 @@
           var api = $('.fullwidthbanner').revolution(
             {
               delay:9000,
-              startwidth:1200,
-              startheight:465,
+              startwidth:1400,
+              startheight:631,
 
               onHoverStop:"on",           // Stop Banner Timet at Hover on Slide on/off
 
