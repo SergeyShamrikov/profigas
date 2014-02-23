@@ -11,7 +11,12 @@
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {margin: 0 0 30px; position: relative; }
+.flexslider {margin: 0 0 33px; position: relative; }
+.flexslider img{
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
 .flex-viewport {}
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1;}

@@ -1,1 +1,3 @@
-{behavior:url(js/PIE.htc);position:relative;}
+.scheme img,.wrapper-dropdown-3,.wrapper-dropdown-3 .dropdown,.wrapper-dropdown-3 .dropdown li:first-of-type a,.wrapper-dropdown-3 .dropdown li:last-of-type a,
+.social a,.cost_box_tab,.cost_it,.cost_btn_lk,.cost_inp[type=text],.quote_box,.news_it,.gallery_box_sub_it img,
+.scheme img,.box_photo img{behavior:url(js/PIE.htc);position:relative;}
