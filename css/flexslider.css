@@ -11,7 +11,8 @@
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {margin: 0 0 33px; position: relative; }
+.flexslider {margin: 15px 0 33px; position: relative; }
+body.gallery_main .flexslider{margin-bottom: 38px;}
 .flexslider img{
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
@@ -38,6 +39,7 @@
 	top: 23%; 
 	cursor: pointer; 
 	text-indent: -9999px;}
+body.gallery_main .flex-direction-nav a,body.gallery_page1 .flex-direction-nav a{top: 40%;}
 .flex-direction-nav .flex-next {right: -30px;background-image: url(../images/hflex-next_bg.png); }
 .flex-direction-nav .flex-prev {left: -30px;background-image: url(../images/hflex-prev_bg.png);}
 .flexslider:hover .flex-next {right: 5px;}

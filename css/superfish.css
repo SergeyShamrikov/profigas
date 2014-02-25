@@ -48,9 +48,14 @@ nav{ position:relative; margin: 16px 0 0 0;padding-left: 7px;}
   font-weight: 600;
   color:#fff;
   letter-spacing: 0.3px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 .sf-with-ul{
-	padding-right: 17px;
+	padding-right: 25px;
 }
 	.sf-with-ul:after{
 		content: "";
@@ -58,7 +63,7 @@ nav{ position:relative; margin: 16px 0 0 0;padding-left: 7px;}
 		width: 0;
 		height: 0;
 		top: 55%;
-		right: 2px;
+		right: 8px;
 		margin-top: -3px;
 		border-width:6px 6px 0 6px;
 		border-style: solid;
