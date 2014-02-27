@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
@@ -18,7 +19,72 @@
     <script src="js/jquery.cycle.all.js"></script>
     <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
 
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+        var dd = new DropDown( $('#dd1') );
+        });
+      $('#s2').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next2', 
+          prev:   '#prev2' 
+      });
+      $('#s3').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next3', 
+          prev:   '#prev3' 
+      });
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          animation: "slide",
+          pauseOnHover: true
+        });
+       });
+      
+    </script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -38,36 +104,42 @@
       <div class="clearfix">
         <div class="grid_12">
           <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
-          <div class="demo f_left">
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-              <span>Киев</span>
-              <ul class="dropdown">
-                <li><a href="#">Киев</a></li>
-                <li><a href="#">Николаев</a></li>
-                <li><a href="#">Кривой рог</a></li>
-                <li><a href="#">Одесса</a></li>
-              </ul>
+          <div class="header_box2 f_left">
+            <div class="demo f_left">
+              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                <span>Киев</span>
+                <ul class="dropdown">
+                  <li><a href="#">Киев</a></li>
+                  <li><a href="#">Николаев</a></li>
+                  <li><a href="#">Кривой рог</a></li>
+                  <li><a href="#">Одесса</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="tel_box f_left">
+              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+              <a href="#" class="tel_lk">Заказать обратный звонок</a>
             </div>
-          ​</div>
-          <div class="tel_box f_left">
-            <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
-            <a href="#" class="tel_lk">Заказать обратный звонок</a>
+            <div class="clear"></div>
           </div>
-          <div class="social f_left">
-            <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
-            <a class="fb" href="#"><i class="fb_icon"></i></a>
-            <a class="tw" href="#"><i class="tw_icon"></i></a>
-            <a class="g" href="#"><i class="g_icon"></i></a>
-          </div>
-          <div class="demo1 f_right">
-            <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
-              <span><i class="ru"></i>Рус</span>
-              <ul class="dropdown">
-                <li><a href="#"><i class="en"></i>Англ</a></li>
-                <li><a href="#"><i class="ru"></i>Рус</a></li>
-              </ul>
+          <div class="header_box3 f_right">
+            <div class="social f_left">
+              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+              <a class="fb" href="#"><i class="fb_icon"></i></a>
+              <a class="tw" href="#"><i class="tw_icon"></i></a>
+              <a class="g" href="#"><i class="g_icon"></i></a>
             </div>
-          ​</div>
+            <div class="demo1 f_right">
+              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+                <span><i class="ru"></i>Рус</span>
+                <ul class="dropdown">
+                  <li><a href="#"><i class="en"></i>Англ</a></li>
+                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="clear"></div>
+          </div>
           <div class="clear"></div>
         </div>
       </div>
@@ -81,7 +153,7 @@
                 <li class="current sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
                 <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
                   <ul class="sub_menu">
-                    <li class="sub_menu_item"><a href="#" class="sub_menu_link">Установка ГБО</a></li>
+                    <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
                     <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
                   </ul>
                 </li>
@@ -148,7 +220,7 @@
                   <div class="grid_7">
                       <ul class="gallery_box">
                         <li class="gallery_box_it">
-                            <ul>
+                            <ul class="wrapper">
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img1.jpg" alt=""></li>
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img2.jpg" alt=""></li>
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img3.jpg" alt=""></li>
@@ -156,7 +228,7 @@
                             </ul>  
                         </li>
                         <li class="gallery_box_it">
-                            <ul>
+                            <ul class="wrapper">
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img5.jpg" alt=""></li>
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img6.jpg" alt=""></li>
                               <li class="gallery_box_sub_it"><img src="images/gallery_box_img7.jpg" alt=""></li>
@@ -249,7 +321,7 @@
           <ul class="footer_menu clearfix">
             <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>

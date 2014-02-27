@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
@@ -20,12 +21,56 @@
    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	 <script src="js/script.js"></script>
    <script>
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+        var dd = new DropDown( $('#dd1') );
       $(function() {
         $( "#accordion" ).accordion({
           header: "dt",
           collapsible: true,
         });
-      });
+});
+});
     </script>
   <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
@@ -47,36 +92,42 @@
       <div class="clearfix">
         <div class="grid_12">
           <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
-          <div class="demo f_left">
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-              <span>Киев</span>
-              <ul class="dropdown">
-                <li><a href="#">Киев</a></li>
-                <li><a href="#">Николаев</a></li>
-                <li><a href="#">Кривой рог</a></li>
-                <li><a href="#">Одесса</a></li>
-              </ul>
+          <div class="header_box2 f_left">
+            <div class="demo f_left">
+              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                <span>Киев</span>
+                <ul class="dropdown">
+                  <li><a href="#">Киев</a></li>
+                  <li><a href="#">Николаев</a></li>
+                  <li><a href="#">Кривой рог</a></li>
+                  <li><a href="#">Одесса</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="tel_box f_left">
+              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+              <a href="#" class="tel_lk">Заказать обратный звонок</a>
             </div>
-          ​</div>
-          <div class="tel_box f_left">
-            <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
-            <a href="#" class="tel_lk">Заказать обратный звонок</a>
+            <div class="clear"></div>
           </div>
-          <div class="social f_left">
-            <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
-            <a class="fb" href="#"><i class="fb_icon"></i></a>
-            <a class="tw" href="#"><i class="tw_icon"></i></a>
-            <a class="g" href="#"><i class="g_icon"></i></a>
-          </div>
-          <div class="demo1 f_right">
-            <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
-              <span><i class="ru"></i>Рус</span>
-              <ul class="dropdown">
-                <li><a href="#"><i class="en"></i>Англ</a></li>
-                <li><a href="#"><i class="ru"></i>Рус</a></li>
-              </ul>
+          <div class="header_box3 f_right">
+            <div class="social f_left">
+              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+              <a class="fb" href="#"><i class="fb_icon"></i></a>
+              <a class="tw" href="#"><i class="tw_icon"></i></a>
+              <a class="g" href="#"><i class="g_icon"></i></a>
             </div>
-          ​</div>
+            <div class="demo1 f_right">
+              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+                <span><i class="ru"></i>Рус</span>
+                <ul class="dropdown">
+                  <li><a href="#"><i class="en"></i>Англ</a></li>
+                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="clear"></div>
+          </div>
           <div class="clear"></div>
         </div>
       </div>
@@ -86,11 +137,11 @@
                 <ul class="sf-menu">
                 <li class="sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
                 <li class="sf-menu_it"><a class="menu_link" href="#">Новости</a></li>
-                <li class="current sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
+                <li class="sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
                 <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
+                <li class="current sf-menu_it"><a class="menu_link" href="#">Услуги</a>
                   <ul class="sub_menu">
-                    <li class="sub_menu_item"><a href="#" class="sub_menu_link">Установка ГБО</a></li>
+                    <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
                     <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
                   </ul>
                 </li>
@@ -186,15 +237,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Базовая комплектация ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -206,15 +257,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Люкс комплектация ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -226,15 +277,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -247,7 +298,7 @@
           </div>
 
           <div class="grid_4">
-            <dl id="accordion">
+            <dl>
               <dt class="GBO_title GBO_gen4">Поколение ГБО<i></i></dt>
               <dd>
                 <ul class="list3">
@@ -301,15 +352,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Базовая комплектация ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -321,15 +372,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Люкс комплектация ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -341,15 +392,15 @@
                       <div class="grid_3 alpha omega grade_box">
                         <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
                         <ul>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">4 целиндра</div>
                             <div class="f_right">5200 - 6900 грн</div>
                           </li>
-                          <li class="box2 wrapper m_bot_zero">
+                          <li class="wrapper m_bot_zero">
                             <div class="f_left">6 целиндра</div>
                             <div class="f_right">7200 - 8500 грн</div>
                           </li>
-                          <li class="box1 wrapper m_bot_zero">
+                          <li class="box4 wrapper m_bot_zero">
                             <div class="f_left">8 целиндра</div>
                             <div class="f_right">8300 - 9300 грн</div>
                           </li>
@@ -362,7 +413,7 @@
           </div>
 
           <div class="grid_4">
-            <dl id="accordion">
+            <dl>
               <dt class="GBO_title GBO_gas_diesel">Газодизель<i></i></dt>
               <dd>
                 <ul class="list3">
@@ -476,6 +527,50 @@
             </dl>
           </div>
         </div>
+        <div class="wrapper banner1">
+          <div class="grid_4">
+            <div class="m_top_zero mini_calculator banner_box">
+              <h6 class="title7">Калькулятор</h6>
+              <p class="p2">Стоимость установки ГБО от</p>
+              <span>5200 грн</span>
+              <a href="#" class="calculator_lk">Подсчитать подробнее<i></i></a>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="m_top_zero installment_plan banner_box">
+              <h6 class="title7">Рассрочка</h6>
+              <p class="p2">Получите рассрочку сроком до</p>
+              <span>24 месяца</span>
+              <a href="#" class="calculator_lk">Заполнить форму<i></i></a>
+            </div>
+          </div>
+          <div class="grid_4">
+            <h6 class="title8">
+              <a href="gallery.html">Галерея авто</a> >
+            </h6>
+            <div class="list4">
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img1.png" alt="">
+                </a>
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img2.png" alt="">
+                </a>
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img3.png" alt="">
+                </a>
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img4.png" alt="">
+                </a>
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img5.png" alt="">
+                </a>
+                <a class="list4_it" href="gallery_page1.html">
+                  <img src="images/list4_img6.png" alt="">
+                </a>
+              
+            </div>
+          </div>
+        </div>
         <div class="achievements">
           <h3 class="title4">Наши достижения</h3>
           <div class="list1 clearfix">
@@ -523,7 +618,7 @@
           <ul class="footer_menu clearfix">
             <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item current"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>

@@ -69,8 +69,7 @@ nav{ position:relative; margin: 16px 0 0 0;padding-left: 7px;}
 		border-style: solid;
 		border-color: #fff transparent;
 	}
-.sf-with-ul:hover:after,
-.current .sf-with-ul:after,
+
 li.sfHover .sf-with-ul:after{
 	border-width: 0 6px 6px 6px;
 }

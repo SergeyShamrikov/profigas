@@ -1,6 +1,5 @@
 @import "reset.css";
 @import "skeleton.css";
-@import "responsive.css";
 @import "superfish.css";
 @import "flexslider.css";
 @import "../font/helvetica.css";
@@ -29,7 +28,9 @@ body.gallery_page1{
 body.about{
   background: #f8f8f8 url(../images/body_about.jpg) center 0 no-repeat;
 }
-
+body.GBO_integration{
+  background: #f8f8f8 url(../images/body_bg4.jpg) center 0 no-repeat;
+}
 /*----------------------> Links And buttons <------------------*/
 a {
   color:#;
@@ -74,6 +75,7 @@ a:hover{
 .m_top_zero{ margin-top: 0 !important;}
 .m_bot_zero{ margin-bottom:0 !important;}
 .m_left_zero{ margin-left:0 !important;}
+.m_right_zero{ margin-right:0 !important;}
 .p_bot_zero{ padding-bottom:0 !important;}
 .p_left_zero{ padding-left:0 !important;}
 
@@ -114,7 +116,7 @@ header {
   padding-top: 15px;
 }
 h1.logo a{
-  display:block;
+  display:inline-block;
   width:184px;
   height:69px;
   margin-left: 2px;
@@ -272,7 +274,7 @@ h1.logo a{
 .tel_box{
   padding-left: 25px;
   margin-top: 16px; 
-  width: 200px;
+  width: 203px;
 }
   .tel{
     font-size: 22px;
@@ -297,7 +299,7 @@ h1.logo a{
   }
 .social{
   margin-top: 24px;
-  padding-left: 17px;
+  padding-right: 22px;
 }
   .social a{
     display: inline-block;
@@ -462,10 +464,10 @@ h1.logo a{
     }
 
 /*=====================> Content ========================*/
-
+body.main #content{margin-top: 378px;}
 #content {padding:0px 0px 0px 0px;z-index: 99; position: relative;}
 .cont_pad{padding:0 0 0 0 !important;}
-.cost_box{margin-top: 378px;padding-bottom: 33px;}
+.cost_box{padding-bottom: 33px;}
 .cost_box_tab{
   border: 1px solid #3b86c4;
   -webkit-border-radius: 5px 7px;
@@ -697,6 +699,7 @@ h1.logo a{
     font-size: 19px;
     line-height: 27px;
     font-weight: 600;
+    color: #fff;
   }
   .make{
     text-decoration: none;
@@ -890,37 +893,48 @@ body.GBO_integration .description_box{
   .gallery_car_it{
     padding-bottom: 18px;
   }
+  .gallery_car_it1{
+    display: inline-block;
+    margin: 0 8px 0 8px;
+    width: 140px;
+  }
     .gallery_car_it img{
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
     }
-.mini_calculator{
-  width: 247px;
+.banner_box{
   margin-top: 11px;
   margin-left: 3px;
   padding: 22px 22px 23px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+}
+.mini_calculator{
   background: #f3f8fc url(../images/calculator_bg.png) 158px 6px no-repeat;
   border: 3px solid rgba(137,199,239,0.4);
 }
-
-  .mini_calculator p{
+.installment_plan{
+  background: #f3f8fc url(../images/installment_plan_bg.png) 135px 4px no-repeat;
+  border: 3px solid rgba(241,208,201,0.4);
+}
+  .banner_box p{
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
-    color: #404040;
     margin:0 0 5px;
+    color: #404040;
   }
-  .mini_calculator span{
+  .banner_box span{
     font-size: 24px;
     line-height: 24px;
     font-weight: 600;
-    color: #3375ab;
+    
   }
-  .calculator_lk{
+  .mini_calculator span{color: #3375ab;}
+  .installment_plan span{color: #db1a00;}
+  .banner_box .calculator_lk{
     display: block;
     font-size: 16px;
     line-height: 1em;
@@ -928,6 +942,11 @@ body.GBO_integration .description_box{
     color: #fff;
     margin-top: 5px;
     padding: 10px 0px 10px 25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .mini_calculator .calculator_lk{
     background: #0f6ab1; /* Old browsers */
     background: -moz-linear-gradient(top,  #0f6ab1 0%, #0a4b7c 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f6ab1), color-stop(100%,#0a4b7c)); /* Chrome,Safari4+ */
@@ -936,11 +955,29 @@ body.GBO_integration .description_box{
     background: -ms-linear-gradient(top,  #0f6ab1 0%,#0a4b7c 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #0f6ab1 0%,#0a4b7c 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f6ab1', endColorstr='#0a4b7c',GradientType=0 ); /* IE6-9 */
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
   }
-    .calculator_lk i{
+  .installment_plan .calculator_lk{
+    background: #cd4f3e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cd4f3e 0%, #90372c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd4f3e), color-stop(100%,#90372c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cd4f3e 0%,#90372c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cd4f3e 0%,#90372c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cd4f3e 0%,#90372c 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #cd4f3e 0%,#90372c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd4f3e', endColorstr='#90372c',GradientType=0 ); /* IE6-9 */
+  }
+  .installment_plan .calculator_lk:hover{
+    background: #cd4f3e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #90372c 0%, #cd4f3e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#90372c), color-stop(100%,#cd4f3e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #90372c 0%,#cd4f3e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #90372c 0%,#cd4f3e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #90372c 0%,#cd4f3e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #90372c 0%,#cd4f3e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90372c', endColorstr='#cd4f3e',GradientType=0 ); /* IE6-9 */
+  
+  }
+    .banner_box i{
       display: inline-block;
       margin-left: 4px;
       margin-top: 1px;
@@ -1028,7 +1065,7 @@ body.GBO_integration .description_box{
   }
     .box3{
       margin: 0 10px 0 8px;
-      width: 818px;
+      width: 820px;
     }
   .pages{
     margin-top: 21px;
@@ -1251,6 +1288,7 @@ body.GBO_integration .description_box{
     background: #fff;
     padding: 15px;
     margin-top: 2px;
+    margin-bottom: 0;
   }
   .grade_box{
     font-size: 12px;
@@ -1266,7 +1304,10 @@ body.GBO_integration .description_box{
     color: #2967bd;
     margin-bottom: 5px;
   }
-  .box1{background: #ebebeb;}
+  #accordion{margin-bottom: 40px;}
+  #accordion dd{height: auto !important;}
+  .box4{background: #ebebeb;}
+.banner1{margin-bottom: 25px;}
 /*=====================> Paragraphs ========================*/
 .pl5{margin-left: 5px;}
 
@@ -1292,9 +1333,13 @@ p {margin-bottom:18px}
 .list1_link{}
 
 .list2{padding-bottom: 19px;}
-.list2_it{
-  padding-bottom: 17px;
-}
+  .list2_it{
+    padding-bottom: 17px;
+  }
+  .list2_title{
+    width: 140px;
+    margin-left: 10px;
+  }
 .list2_link{}
 
 .list3{}
@@ -1303,7 +1348,12 @@ p {margin-bottom:18px}
   padding-left:20px;
 }
 .list3_link{}
-
+.list4_it{padding-bottom: 9px;}
+  .list4_it{
+    margin: 0 0 6px 6px;
+    display: inline-block;
+    
+  }
 /*=====================> Titles ========================*/
 h2,h3,h4{
   font-weight:normal;
@@ -1356,6 +1406,23 @@ h2,h3,h4{
   text-decoration: underline;
 }
 .title6:hover{text-decoration: none;}
+.title7 {
+  font-size: 24px;
+  line-height: 1em;
+  padding-bottom: 5px;
+  font-weight: 700;
+  color: #3b86c4;
+}
+.installment_plan .title7{color: #cd4f3e;}
+.title8{
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: 700;
+    color: #3375ab;
+    margin-bottom: 10px;
+}
+.title8 a{color: #3375ab;text-decoration: underline;}
+.title8 a:hover{text-decoration: none;}
 .t_ind{ margin-bottom:px;}
 .t_ind1{ margin-bottom:px;}
 .t_ind2{ margin-bottom:px;}
@@ -1517,7 +1584,7 @@ footer {
       line-height: 36px;
       font-weight: 700;
       color: #4e95d0;
-      padding-left: 37px;
+      padding-left: 36px;
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease;

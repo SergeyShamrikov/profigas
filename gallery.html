@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
@@ -20,6 +21,49 @@
    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	 <script src="js/script.js"></script>
    <script>
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+        var dd = new DropDown( $('#dd1') );
+        });
       $('#s2').cycle({ 
           fx:     'scrollDown', 
           speed:  'slow', 
@@ -61,36 +105,42 @@
       <div class="clearfix">
         <div class="grid_12">
           <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
-          <div class="demo f_left">
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-              <span>Киев</span>
-              <ul class="dropdown">
-                <li><a href="#">Киев</a></li>
-                <li><a href="#">Николаев</a></li>
-                <li><a href="#">Кривой рог</a></li>
-                <li><a href="#">Одесса</a></li>
-              </ul>
+          <div class="header_box2 f_left">
+            <div class="demo f_left">
+              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                <span>Киев</span>
+                <ul class="dropdown">
+                  <li><a href="#">Киев</a></li>
+                  <li><a href="#">Николаев</a></li>
+                  <li><a href="#">Кривой рог</a></li>
+                  <li><a href="#">Одесса</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="tel_box f_left">
+              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+              <a href="#" class="tel_lk">Заказать обратный звонок</a>
             </div>
-          ​</div>
-          <div class="tel_box f_left">
-            <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
-            <a href="#" class="tel_lk">Заказать обратный звонок</a>
+            <div class="clear"></div>
           </div>
-          <div class="social f_left">
-            <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
-            <a class="fb" href="#"><i class="fb_icon"></i></a>
-            <a class="tw" href="#"><i class="tw_icon"></i></a>
-            <a class="g" href="#"><i class="g_icon"></i></a>
-          </div>
-          <div class="demo1 f_right">
-            <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
-              <span><i class="ru"></i>Рус</span>
-              <ul class="dropdown">
-                <li><a href="#"><i class="en"></i>Англ</a></li>
-                <li><a href="#"><i class="ru"></i>Рус</a></li>
-              </ul>
+          <div class="header_box3 f_right">
+            <div class="social f_left">
+              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+              <a class="fb" href="#"><i class="fb_icon"></i></a>
+              <a class="tw" href="#"><i class="tw_icon"></i></a>
+              <a class="g" href="#"><i class="g_icon"></i></a>
             </div>
-          ​</div>
+            <div class="demo1 f_right">
+              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+                <span><i class="ru"></i>Рус</span>
+                <ul class="dropdown">
+                  <li><a href="#"><i class="en"></i>Англ</a></li>
+                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="clear"></div>
+          </div>
           <div class="clear"></div>
         </div>
       </div>
@@ -104,7 +154,7 @@
                 <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
                 <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
                   <ul class="sub_menu">
-                    <li class="sub_menu_item"><a href="#" class="sub_menu_link">Установка ГБО</a></li>
+                    <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
                     <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
                   </ul>
                 </li>
@@ -151,21 +201,21 @@
               <figure class="p_rel">
                   <div id="s2" class="pics p_rel">
                     <div>
-                      <img src="images/flexslider_img1.jpg">
+                      <img src="images/flexslider_img1.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Audi A6 Allroad с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
                       </p>
                     </div>
                     <div>
-                      <img src="images/slider_img.jpg">
+                      <img src="images/slider_img.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Honda CR-V с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
                       </p>
                     </div>
                     <div>
-                      <img src="images/flexslider_img33.jpg">
+                      <img src="images/flexslider_img33.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Audi A6 Allroad с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
@@ -179,21 +229,21 @@
               <figure class="p_rel">
                   <div id="s3" class="pics p_rel">
                     <div>
-                      <img src="images/flexslider_img1.jpg">
+                      <img src="images/flexslider_img1.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Audi A6 Allroad с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
                       </p>
                     </div>
                     <div>
-                      <img src="images/slider_img.jpg">
+                      <img src="images/slider_img.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Honda CR-V с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
                       </p>
                     </div>
                     <div>
-                      <img src="images/flexslider_img33.jpg">
+                      <img src="images/flexslider_img33.jpg" alt="">
                       <p class="p_abs baner">
                         <span>Audi A6 Allroad с установленным</span>
                         <span>на СТО Профигаз ГБО 4-го поколения</span>
@@ -211,33 +261,41 @@
       <div class="wrapper">
         <div class="grid_4">
           <figure class="make_logo">
-            <img src="images/audi_logo.png"alt="">
+            <img src="images/audi_logo.png" alt="">
           </figure>
         </div>
         <div class="grid_8">
           <ul class="list2">
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/audi_img1.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Audi A4</a>
-                <span class="generation">8 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/audi_img1.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Audi A4</a>
+                  <span class="generation">8 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/audi_img2.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">Audi A6 Allroad</a>
-                <span class="generation">7 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/audi_img2.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Audi A6 Allroad</a>
+                  <span class="generation">7 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/audi_img3.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Audi A6</a>
-                <span class="generation">7 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/audi_img3.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Audi A6</a>
+                  <span class="generation">7 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/audi_img4.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">Audi Q7 </a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/audi_img4.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Audi Q7 </a>
+                  <span class="generation">2 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
@@ -251,33 +309,41 @@
       <div class="wrapper">
         <div class="grid_4">
           <figure class="make_logo">
-            <img src="images/honda_logo.png"alt="">
+            <img src="images/honda_logo.png" alt="">
           </figure>
         </div>
         <div class="grid_8">
           <ul class="list2">
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/honda_img1.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Civic</a>
-                <span class="generation">5 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/honda_img1.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Civic</a>
+                  <span class="generation">5 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/honda_img2.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">CR-V</a>
-                <span class="generation">4 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/honda_img2.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">CR-V</a>
+                  <span class="generation">4 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/honda_img3.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">HR-V</a>
-                <span class="generation">7 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/honda_img3.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">HR-V</a>
+                  <span class="generation">7 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/honda_img4.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">Jazz</a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/honda_img4.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Jazz</a>
+                  <span class="generation">2 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
@@ -291,64 +357,82 @@
       <div class="wrapper">
         <div class="grid_4">
           <figure class="make_logo">
-            <img src="images/hyundai_logo.png"alt="">
+            <img src="images/hyundai_logo.png" alt="">
           </figure>
         </div>
         <div class="grid_8">
           <ul class="list2">
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/hyundai_img1.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">i30</a>
-                <span class="generation">3 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img1.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">i30</a>
+                  <span class="generation">3 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/hyundai_img2.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="">Elantra</a>
-                <span class="generation">4 поколений</span>
-              </div>
-            </li>
-            <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/hyundai_img3.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Tucson</a>
-                <span class="generation">7 поколений</span>
-              </div>
-              <div class="grid_2"><img src="images/hyundai_img4.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">ix35</a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img2.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="">Elantra</a>
+                  <span class="generation">4 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/hyundai_img5.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Getz</a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img3.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Tucson</a>
+                  <span class="generation">7 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/hyundai_img6.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">Matrix</a>
-                <span class="generation">3 поколений</span>
-              </div>
-            </li>
-            <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/hyundai_img7.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">i20</a>
-                <span class="generation">2 поколений</span>
-              </div>
-              <div class="grid_2"><img src="images/hyundai_img8.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">i10</a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img4.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">ix35</a>
+                  <span class="generation">2 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/hyundai_img9.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Sonata</a>
-                <span class="generation">7 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img5.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Getz</a>
+                  <span class="generation">2 поколений</span>
+                </div>
+              </div>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img6.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Matrix</a>
+                  <span class="generation">3 поколений</span>
+                </div>
+              </div>
+            </li>
+            <li class="wrapper list2_it">
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img7.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">i20</a>
+                  <span class="generation">2 поколений</span>
+                </div>
+              </div>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img8.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">i10</a>
+                  <span class="generation">2 поколений</span>
+                </div>
+              </div>
+            </li>
+            <li class="wrapper list2_it">
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/hyundai_img9.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Sonata</a>
+                  <span class="generation">7 поколений</span>
+                </div>
               </div>
             </li>
           </ul>
@@ -357,28 +441,34 @@
       <div class="wrapper p3">
         <div class="grid_4">
           <figure class="make_logo">
-            <img src="images/mazda_logo.png"alt="">
+            <img src="images/mazda_logo.png" alt="">
           </figure>
         </div>
         <div class="grid_8">
           <ul class="list2">
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/mazda_img1.jpg"  alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Mazda 3</a>
-                <span class="generation">5 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/mazda_img1.jpg"  alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Mazda 3</a>
+                  <span class="generation">5 поколений</span>
+                </div>
               </div>
-              <div class="grid_2"><img src="images/mazda_img2.jpg" alt=""></div>
-              <div class="grid_2 omega">
-                <a class="title6" href="gallery_page1.html">Mazda 6</a>
-                <span class="generation">4 поколений</span>
+              <div class="grid_4 omega">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/mazda_img2.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Mazda 6</a>
+                  <span class="generation">4 поколений</span>
+                </div>
               </div>
             </li>
             <li class="wrapper list2_it">
-              <div class="grid_2 alpha"><img src="images/mazda_img3.jpg" alt=""></div>
-              <div class="grid_2">
-                <a class="title6" href="gallery_page1.html">Mazda CX-7</a>
-                <span class="generation">2 поколений</span>
+              <div class="grid_4 alpha">
+                <figure class="f_left"><a href="gallery_page1.html"><img src="images/mazda_img3.jpg" alt=""></a></figure>
+                <div class="f_left list2_title">
+                  <a class="title6" href="gallery_page1.html">Mazda CX-7</a>
+                  <span class="generation">2 поколений</span>
+                </div>
               </div>
             </li>
           </ul>
@@ -398,7 +488,7 @@
           <ul class="footer_menu clearfix">
             <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>

@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
@@ -99,43 +100,49 @@
     	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
     <![endif]-->
 </head>
-<body>
+<body class="main">
 <!--==============================header=================================-->
  	<header>
     <div class="container_12 header_top">
       <div class="clearfix">
         <div class="grid_12">
           <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
-          <div class="demo f_left">
-            <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-              <span>Киев</span>
-              <ul class="dropdown">
-                <li><a href="#">Киев</a></li>
-                <li><a href="#">Николаев</a></li>
-                <li><a href="#">Кривой рог</a></li>
-                <li><a href="#">Одесса</a></li>
-              </ul>
+          <div class="header_box2 f_left">
+            <div class="demo f_left">
+              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                <span>Киев</span>
+                <ul class="dropdown">
+                  <li><a href="#">Киев</a></li>
+                  <li><a href="#">Николаев</a></li>
+                  <li><a href="#">Кривой рог</a></li>
+                  <li><a href="#">Одесса</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="tel_box f_left">
+              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+              <a href="#" class="tel_lk">Заказать обратный звонок</a>
             </div>
-          ​</div>
-          <div class="tel_box f_left">
-            <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
-            <a href="#" class="tel_lk">Заказать обратный звонок</a>
+            <div class="clear"></div>
           </div>
-          <div class="social f_left">
-            <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
-            <a class="fb" href="#"><i class="fb_icon"></i></a>
-            <a class="tw" href="#"><i class="tw_icon"></i></a>
-            <a class="g" href="#"><i class="g_icon"></i></a>
-          </div>
-          <div class="demo1 f_right">
-            <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
-              <span><i class="ru"></i>Рус</span>
-              <ul class="dropdown">
-                <li><a href="#"><i class="en"></i>Англ</a></li>
-                <li><a href="#"><i class="ru"></i>Рус</a></li>
-              </ul>
+          <div class="header_box3 f_right">
+            <div class="social f_left">
+              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+              <a class="fb" href="#"><i class="fb_icon"></i></a>
+              <a class="tw" href="#"><i class="tw_icon"></i></a>
+              <a class="g" href="#"><i class="g_icon"></i></a>
             </div>
-          ​</div>
+            <div class="demo1 f_right">
+              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+                <span><i class="ru"></i>Рус</span>
+                <ul class="dropdown">
+                  <li><a href="#"><i class="en"></i>Англ</a></li>
+                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="clear"></div>
+          </div>
           <div class="clear"></div>
         </div>
       </div>
@@ -149,7 +156,7 @@
                 <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
                 <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
                   <ul class="sub_menu">
-                    <li class="sub_menu_item"><a href="#" class="sub_menu_link">Установка ГБО</a></li>
+                    <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
                     <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
                   </ul>
                 </li>
@@ -500,267 +507,265 @@
 <!--==============================content================================-->
   <section id="content">
     
-  <article>
-    <div class="container_12">
-      <div class="cost_box">
-        <div class="cost_box_tab">
-          <ul class="cost_menu clearfix">
-            <li class="cost_it"><a href="#" class="cost_lk cost_lk_first">Анкета</a></li>
-            <li class="cost_it cost_it_second"><a href="#" class="cost_lk cost_lk_second">Комплектация ГБО</a></li>
-            <li class="cost_it cost_it_last"><a href="#" class="cost_lk cost_lk_last">Рассчет и заказ</a></li>
+  <div class="container_12">
+    <div class="cost_box">
+      <div class="cost_box_tab">
+        <ul class="cost_menu clearfix">
+          <li class="cost_it"><a href="#" class="cost_lk cost_lk_first">Анкета</a></li>
+          <li class="cost_it cost_it_second"><a href="#" class="cost_lk cost_lk_second">Комплектация ГБО</a></li>
+          <li class="cost_it cost_it_last"><a href="#" class="cost_lk cost_lk_last">Рассчет и заказ</a></li>
+        </ul>
+      </div>
+      <div class="cost_box_btn clearfix">
+        <div class="grid_4">
+          <div class="clearfix box2">
+            <span class="cost_btm_n f_left">Марка</span>
+            <div class="cost_btm f_right">
+              <div id="dd2" class="wrapper-dropdown-3" tabindex="1">
+                <span>Ауди</span>
+                <ul class="dropdown">
+                  <li><a href="#">Ауди</a></li>
+                  <li><a href="#">Лада</a></li>
+                  <li><a href="#">Бентли</a></li>
+                  <li><a href="#">Славута</a></li>
+                </ul>
+              </div>
+            ​</div>
+          </div>
+          <div class="clearfix box2">
+            <span class="cost_btm_n f_left">Топливо</span>
+            <div class="cost_btm f_right">
+              <div id="dd3" class="wrapper-dropdown-3" tabindex="1">
+                <span>Бензин</span>
+                <ul class="dropdown">
+                  <li><a href="#">Бензин</a></li>
+                  <li><a href="#">Дизель</a></li>
+                  <li><a href="#">Газ</a></li>
+                  <li><a href="#">Электричество</a></li>
+                </ul>
+              </div>
+            ​</div>
+          </div>
+        </div>
+        <div class="grid_4">
+          <div class="clearfix box2">
+            <span class="cost_btm_n f_left">Модель</span>
+            <div class="cost_btm f_right">
+              <div id="dd4" class="wrapper-dropdown-3" tabindex="1">
+                <span>A6 Allroad</span>
+                <ul class="dropdown">
+                  <li><a href="#">A6 Allroad</a></li>
+                  <li><a href="#">A6 Allroad</a></li>
+                  <li><a href="#">A6 Allroad</a></li>
+                  <li><a href="#">A6 Allroad</a></li>
+                </ul>
+              </div>
+            ​</div>
+          </div>
+          <div class="clearfix box2">
+            <span class="cost_btm_n f_left">ОбЪём двигателя</span>
+            <div class="cost_btm f_left">
+              <input class="cost_inp" type="text" value="2.8">
+              <span class="cost_btm_n">л</span>
+            ​</div>
+          </div>
+
+        </div>
+        <div class="grid_4">
+          <div class="clearfix box2">
+            <span class="cost_btm_n f_left">Год выпуска</span>
+            <div class="cost_btm f_right">
+              <div id="dd5" class="wrapper-dropdown-3" tabindex="1">
+                <span>2009</span>
+                <ul class="dropdown">
+                  <li><a href="#">2007</a></li>
+                  <li><a href="#">2008</a></li>
+                  <li><a href="#">2009</a></li>
+                  <li><a href="#">2010</a></li>
+                  <li><a href="#">2011</a></li>
+                  <li><a href="#">2012</a></li>
+                  <li><a href="#">2013</a></li>
+                  <li><a href="#">2014</a></li>
+                </ul>
+              </div>
+            ​</div>
+          </div>
+          <a href="#" class="cost_btn_lk f_right">Далее</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="grid_12">
+        <h2 class="title1"><a href="gallery.html">Автомобили переоборудованные на СТО Профигаз</a></h2>
+        <div class="flexslider wrapper">
+          <ul class="slides">
+            <li class="p_rel">
+              <figure class="p_rel">
+                <div id="s2" class="pics p_rel">
+                  <div>
+                    <img src="images/flexslider_img1.jpg" alt="">
+                    <p class="p_abs baner">
+                      <span>Audi A6 Allroad с установленным</span>
+                      <span>на СТО Профигаз ГБО 4-го поколения</span>
+                    </p>
+                  </div>
+                  <div>
+                    <img src="images/flexslider_img33.jpg" alt="">
+                    <p class="p_abs baner">
+                      <span>Audi A6 Allroad с установленным</span>
+                      <span>на СТО Профигаз ГБО 4-го поколения</span>
+                    </p>
+                  </div>
+                  <div>
+                    <img src="images/flexslider_img1.jpg" alt="">
+                    <p class="p_abs baner">
+                      <span>Audi A6 Allroad с установленным</span>
+                      <span>на СТО Профигаз ГБО 4-го поколения</span>
+                    </p>
+                  </div>
+              </div>
+              <div class="nav"><a id="prev2" href="#"><em></em></a> <a id="next2" href="#"><em></em></a></div>
+
+
+              </figure>
+              <blockquote class="quote_box p_rel clearfix">
+                <p class="quote p_rel">Установка произведена качественно, нигде не висят провода, все закреплено и заизолировано. Машинка едет очень хорошо. Сам в жизни бы не поверил, но это факт. Установленны высокоскоростные форсунки HANA, задержек между ускорением и нажатием педали газа не ощущается
+                <a href="#" class="quote_lk">читать дальше...</a></p>
+                <span class="owner f_right">Анатолий -<a class="quote_lk make" href=""> владелец автомобиля Audi A6 Allroad</a></span>
+              </blockquote>
+            </li>
+            <li class="p_rel">
+              <figure >
+                <img src="images/flexslider_img1.jpg" alt="">
+
+              </figure>
+              <blockquote class="quote_box p_rel clearfix">
+                <p class="quote p_rel">Установка произведена качественно, нигде не висят провода, все закреплено и заизолировано. Машинка едет очень хорошо. Сам в жизни бы не поверил, но это факт. Установленны высокоскоростные форсунки HANA, задержек между ускорением и нажатием педали газа не ощущается
+                <a href="#" class="quote_lk">читать дальше...</a></p>
+                <span class="owner f_right">Анатолий -<a class="quote_lk make" href=""> владелец автомобиля Audi A6 Allroad</a></span>
+              </blockquote>
+            </li>
           </ul>
         </div>
-        <div class="cost_box_btn clearfix">
-          <div class="grid_4">
-            <label for="" class="clearfix box2">
-              <span class="cost_btm_n f_left">Марка</span>
-              <div class="cost_btm f_right">
-                <div id="dd2" class="wrapper-dropdown-3" tabindex="1">
-                  <span>Ауди</span>
-                  <ul class="dropdown">
-                    <li><a href="#">Ауди</a></li>
-                    <li><a href="#">Лада</a></li>
-                    <li><a href="#">Бентли</a></li>
-                    <li><a href="#">Славута</a></li>
-                  </ul>
-                </div>
-              ​</div>
-            </label>
-            <label for="" class="clearfix box2">
-              <span class="cost_btm_n f_left">Топливо</span>
-              <div class="cost_btm f_right">
-                <div id="dd3" class="wrapper-dropdown-3" tabindex="1">
-                  <span>Бензин</span>
-                  <ul class="dropdown">
-                    <li><a href="#">Бензин</a></li>
-                    <li><a href="#">Дизель</a></li>
-                    <li><a href="#">Газ</a></li>
-                    <li><a href="#">Электричество</a></li>
-                  </ul>
-                </div>
-              ​</div>
-            </label>
+      </div>
+    </div>
+    <div class="news_box">
+      <h3 class="title2"><a href="">Новости</a></h3>
+      <div class="clearfix">
+        <div class="grid_4">
+          <div class="news_it">
+            <figure class="video p_rel">
+              <img src="images/video_img.png" alt="">
+              <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
+            </figure>
+            <div class="news_cont">
+              <h4 class="title3">Установка ГБО</h4>
+              <a href="#" class="news_lk">Смотреть видео</a>
+            </div>
           </div>
-          <div class="grid_4">
-            <label for="" class="clearfix box2">
-              <span class="cost_btm_n f_left">Модель</span>
-              <div class="cost_btm f_right">
-                <div id="dd4" class="wrapper-dropdown-3" tabindex="1">
-                  <span>A6 Allroad</span>
-                  <ul class="dropdown">
-                    <li><a href="#">A6 Allroad</a></li>
-                    <li><a href="#">A6 Allroad</a></li>
-                    <li><a href="#">A6 Allroad</a></li>
-                    <li><a href="#">A6 Allroad</a></li>
-                  </ul>
-                </div>
-              ​</div>
-            </label>
-            <label for="" class="clearfix box2">
-              <span class="cost_btm_n f_left">ОбЪём двигателя</span>
-              <div class="cost_btm f_left">
-                <input class="cost_inp" type="text" value="2.8">
-                <span class="cost_btm_n">л</span>
-              ​</div>
-            </label>
-
+        </div>
+        <div class="grid_4">
+          <div class="news_it">
+            <figure class="news p_rel">
+              <img src="images/news_img.png" alt="">
+              <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+            </figure>
+            <div class="news_cont">
+              <h4 class="title3">Новая программа лояльности!</h4>
+              <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
+                <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+              </p>
+              
+            </div>
           </div>
-          <div class="grid_4">
-            <label for="" class="clearfix box2">
-              <span class="cost_btm_n f_left">Год выпуска</span>
-              <div class="cost_btm f_right">
-                <div id="dd5" class="wrapper-dropdown-3" tabindex="1">
-                  <span>2009</span>
-                  <ul class="dropdown">
-                    <li><a href="#">2007</a></li>
-                    <li><a href="#">2008</a></li>
-                    <li><a href="#">2009</a></li>
-                    <li><a href="#">2010</a></li>
-                    <li><a href="#">2011</a></li>
-                    <li><a href="#">2012</a></li>
-                    <li><a href="#">2013</a></li>
-                    <li><a href="#">2014</a></li>
-                  </ul>
-                </div>
-              ​</div>
-            </label>
-            <a href="#" class="cost_btn_lk f_right">Далее</a>
+        </div>
+        <div class="grid_4">
+          <div class="news_it">
+            <figure class="photo p_rel">
+              <img src="images/photo_img.png" alt="">
+              <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
+            </figure>
+            <div class="news_cont">
+              <h4 class="title3">Audi A6 Allroad 2010</h4>
+              <a href="#" class="news_lk">Посмотреть галерею</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    
+    <div class="achievements">
+      <h3 class="title4">Наши достижения</h3>
+      <div class="list1 clearfix">
+        <div class="grid_4">
+          <div class="clearfix column1">
+            <img src="images/car_icon.png" alt="" class="f_left">
+            <div class="box1 f_left">
+              <p>Автомобилей переоборудовано</p>
+              <span class="qt">15600</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid_4">
+          <div class="clearfix column2">
+            <img src="images/map_icon.png" alt="">
+            <div class="box1">
+              <p>Количество СТО в сети</p>
+              <span class="qt">1536</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid_4">
+          <div class="clearfix column3">
+            <img src="images/balon_icon.png" alt="" class="f_left">
+            <div class="box1 f_right">
+              <p>Размеров баллонов</p>
+              <span class="qt">2500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="equipment">
+      <h3 class="title4">Оборудование</h3>
       <div class="wrapper">
         <div class="grid_12">
-          <h2 class="title1"><a href="gallery.html">Автомобили переоборудованные на СТО Профигаз</a></h2>
-          <div class="flexslider wrapper">
-            <ul class="slides">
-              <li class="p_rel">
-                <figure class="p_rel">
-                  <div id="s2" class="pics p_rel">
-                    <div>
-                      <img src="images/flexslider_img1.jpg">
-                      <p class="p_abs baner">
-                        <span>Audi A6 Allroad с установленным</span>
-                        <span>на СТО Профигаз ГБО 4-го поколения</span>
-                      </p>
-                    </div>
-                    <div>
-                      <img src="images/flexslider_img33.jpg">
-                      <p class="p_abs baner">
-                        <span>Audi A6 Allroad с установленным</span>
-                        <span>на СТО Профигаз ГБО 4-го поколения</span>
-                      </p>
-                    </div>
-                    <div>
-                      <img src="images/flexslider_img1.jpg">
-                      <p class="p_abs baner">
-                        <span>Audi A6 Allroad с установленным</span>
-                        <span>на СТО Профигаз ГБО 4-го поколения</span>
-                      </p>
-                    </div>
-                </div>
-                <div class="nav"><a id="prev2" href="#"><em></em></a> <a id="next2" href="#"><em></em></a></div>
-
-
-                </figure>
-                <blockquote class="quote_box p_rel clearfix">
-                  <p class="quote p_rel">Установка произведена качественно, нигде не висят провода, все закреплено и заизолировано. Машинка едет очень хорошо. Сам в жизни бы не поверил, но это факт. Установленны высокоскоростные форсунки HANA, задержек между ускорением и нажатием педали газа не ощущается
-                  <a href="#" class="quote_lk">читать дальше...</a></p>
-                  <span class="owner f_right">Анатолий<a class="quote_lk make" href="">- владелец автомобиля Audi A6 Allroad</a></span>
-                </blockquote>
-              </li>
-              <li class="p_rel">
-                <figure >
-                  <img src="images/flexslider_img1.jpg" alt="">
-
-                </figure>
-                <blockquote class="quote_box p_rel clearfix">
-                  <p class="quote p_rel">Установка произведена качественно, нигде не висят провода, все закреплено и заизолировано. Машинка едет очень хорошо. Сам в жизни бы не поверил, но это факт. Установленны высокоскоростные форсунки HANA, задержек между ускорением и нажатием педали газа не ощущается
-                  <a href="#" class="quote_lk">читать дальше...</a></p>
-                  <span class="owner f_right">Анатолий<a class="quote_lk make" href="">- владелец автомобиля Audi A6 Allroad</a></span>
-                </blockquote>
-              </li>
-            </ul>
-          </div>
+          <ul class="list clearfix">
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img1.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img2.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img3.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img4.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img5.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img6.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img7.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img8.png" alt=""></a>
+            </li>
+            <li class="list_item">
+              <a href="#" class="list_link"><img src="images/equipment_img9.png" alt=""></a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="news_box">
-        <h3 class="title2"><a href="">Новости</a></h3>
-        <div class="clearfix">
-          <div class="grid_4">
-            <div class="news_it">
-              <figure class="video p_rel">
-                <img src="images/video_img.png" alt="">
-                <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
-              </figure>
-              <div class="news_cont">
-                <h4 class="title3">Установка ГБО</h4>
-                <a href="#" class="news_lk">Смотреть видео</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid_4">
-            <div class="news_it">
-              <figure class="news p_rel">
-                <img src="images/news_img.png" alt="">
-                <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
-              </figure>
-              <div class="news_cont">
-                <h4 class="title3">Новая программа лояльности!</h4>
-                <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
-                  <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
-                </p>
-                
-              </div>
-            </div>
-          </div>
-          <div class="grid_4">
-            <div class="news_it">
-              <figure class="photo p_rel">
-                <img src="images/photo_img.png" alt="">
-                <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
-              </figure>
-              <div class="news_cont">
-                <h4 class="title3">Audi A6 Allroad 2010</h4>
-                <a href="#" class="news_lk">Посмотреть галерею</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="achievements">
-        <h3 class="title4">Наши достижения</h3>
-        <div class="list1 clearfix">
-          <div class="grid_4">
-            <div class="clearfix column1">
-              <img src="images/car_icon.png" alt="" class="f_left">
-              <div class="box1 f_left">
-                <p>Автомобилей переоборудовано</p>
-                <span class="qt">15600</span>
-              </div>
-            </div>
-          </div>
-          <div class="grid_4">
-            <div class="clearfix column2">
-              <img src="images/map_icon.png" alt="">
-              <div class="box1">
-                <p>Количество СТО в сети</p>
-                <span class="qt">1536</span>
-              </div>
-            </div>
-          </div>
-          <div class="grid_4">
-            <div class="clearfix column3">
-              <img src="images/balon_icon.png" alt="" class="f_left">
-              <div class="box1 f_right">
-                <p>Размеров баллонов</p>
-                <span class="qt">2500</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="equipment">
-        <h3 class="title4">Оборудование</h3>
-        <div class="wrapper">
-          <div class="grid_12">
-            <ul class="list clearfix">
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img1.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img2.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img3.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img4.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img5.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img6.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img7.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img8.png" alt=""></a>
-              </li>
-              <li class="list_item">
-                <a href="#" class="list_link"><img src="images/equipment_img9.png" alt=""></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="description_box">
-        СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
-      </p>
     </div>
-  </article>
+    <p class="description_box">
+      СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
+    </p>
+  </div>
   </section>
 <!--==============================footer=================================-->
   <footer>
@@ -770,7 +775,7 @@
           <ul class="footer_menu clearfix">
             <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
-            <li class="footer_item"><a href="#" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
             <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>
