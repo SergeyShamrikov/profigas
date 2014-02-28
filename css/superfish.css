@@ -3,7 +3,7 @@ nav{ position:relative; margin: 16px 0 0 0;padding-left: 7px;}
 .sf-menu ul li {width:100%}
 .sf-menu li {float:left;position:relative}
 
-
+.button_nav{display: none;}
 .sf-menu{
 	padding-top: 1px;	
 }
@@ -138,9 +138,13 @@ li.sfHover li.sfHover .sub_menu_link{}
 .sf-menu li li li{}
 .sf-menu li li li a{}
 .sf-menu li li li a:hover{}
+
+
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 995px) {
-	 .sf-menu>li>a .menu-arrow{
+
+
+	/* .sf-menu>li>a .menu-arrow{
     display:inline-block;
     width:px;
     margin-left:5px;
@@ -156,11 +160,74 @@ li.sfHover li.sfHover .sub_menu_link{}
    }
 	 .sf-menu a:hover .menu-arrow, .sf-menu li.current>a .menu-arrow, .sf-menu .sfHover>a:hover .menu-arrow{
     background-position:0;
-   }
+   }*/
 }
 
 @media only screen and (max-width: 767px) {
-  nav{
+
+nav{position: relative;}	
+nav:before{display: none;}
+.sf-menu:after{display: none;}
+.sf-menu{
+	display: none;
+	position: absolute;
+	padding-top: 20px;
+	width: 100%;
+	top: 42px;
+	z-index: 999;
+	background: #0c5288;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+}
+	.sf-menu_it,.sf-menu li{
+		float: none !important;
+		display: block;
+		text-align: center;
+	}
+	.button_nav{
+		position: relative;
+		z-index: 9999;
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		line-height: 1em;
+		font-weight: 700;
+		color: #0c5288;
+		background: #fff;
+		padding: 16px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.sub_menu_link{
+		background: none;
+		color: #fff;
+		font-size: 13px;
+		padding-left: 200px;
+		text-align: left;
+	}
+	.menu_link:hover, .current .menu_link, li.sfHover .menu_link,.sub_menu_link:hover {
+		background: #fff !important;
+		box-shadow: none;
+		color: #0c5288;
+		text-shadow: none;
+		font-size: 20px;
+	}
+	.sf-with-ul:after{display: none;}
+	.sub_menu:after, li.sfHover>.sub_menu:after{display: none;}
+		.sf-menu ul,.sub_menu, li.sfHover>.sub_menu{
+			position: relative;
+			display: block !important;
+			top: 0;
+			left: 0;
+			background: none;
+			overflow: hidden;
+			width: 100%;
+		}
+		.fullwidthbanner-container{z-index: 9;}
+
+  /*nav{
 		float:none;
 		font:12px/15px Arial, Helvetica, sans-serif;
 		text-transform:uppercase;
@@ -180,7 +247,7 @@ li.sfHover li.sfHover .sub_menu_link{}
 	    outline: none;
 	    padding: 5px;
 		border:2px solid #9e9e9e;
-	}
+	}*/
 	
 }
 

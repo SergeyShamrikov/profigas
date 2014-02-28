@@ -3,7 +3,7 @@
  body{min-width:768px;}
 body.main #content{margin-top: 10px;}
 .fullwidthbanner-container{position: relative;}
-
+.grade_lk{font-size: 13px;}
 h1.logo{width: 100%;text-align: center;}
 .sf-menu:after{width: 778px;}
 
@@ -21,7 +21,6 @@ h1.logo{width: 100%;text-align: center;}
 	}
 	.breadcrumbs_first{height: auto;}
 		.breadcrumbs_lk b{display: inline-block;}
-	}
 	.breadcrumbs_last{color: #000 !important;}
 	a.breadcrumbs_lk,a.breadcrumbs_lk span{text-decoration: underline;}
 	.breadcrumbs_it:hover a.breadcrumbs_lk span{
@@ -32,9 +31,9 @@ h1.logo{width: 100%;text-align: center;}
 		text-decoration: none;
 		color: #ed1f25;
 	}
-	.breadcrumbs_lk:before{display: none;}
-	.breadcrumbs_lk:after{display: none;}
-		.breadcrumbs_first img{display: none;}
+	.breadcrumbs_lk:before{width: 0;}
+	.breadcrumbs_lk:after{width: 0;}
+		.breadcrumbs_first img{width: 0;}
 		.breadcrumbs_first span{display: inline-block;}
 
 .wrapper-dropdown-3{margin-left: 0;}
@@ -73,6 +72,10 @@ h1.logo{width: 100%;text-align: center;}
 @media only screen and (max-width: 767px) {
  body{min-width:420px;}
 
+#content{
+		z-index: 1;
+		position: relative;
+	}
 .m_bot_zer_res2{margin-bottom: 0 !important;}
 
  nav{
@@ -216,7 +219,6 @@ h1.logo{width: 100%;text-align: center;}
 
 .list2_it>div.grid_2{display: inline-block;width: auto;}
 .list2_it{padding-bottom: 5px;}
-	.list2_it div.grid_4{padding-left: 60px;}
 		.more{margin-top: 10px;}
 #accordion div.grid_4{margin-bottom: 0;}
 #accordion{padding-top: 15px;}

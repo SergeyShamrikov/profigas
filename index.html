@@ -12,7 +12,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
     <script src="js/superfish.js"></script>
-	 <script src="js/jquery.mobilemenu.js"></script>
 	 <script src="js/jquery.flexslider.js"></script>
 	 <script src="js/jquery.easing.1.3.js"></script>
    <script src="js/modernizr.custom.79639.js"></script>
@@ -20,19 +19,23 @@
 
    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	 <script src="js/script.js"></script>
-	 <script>
-      $('#s2').cycle({ 
-          fx:     'scrollDown', 
-          speed:  'slow', 
-          timeout: 0, 
-          next:   '#next2', 
-          prev:   '#prev2' 
-      });
+	 <script>      
 		  $(window).load(function() {
 				$('.flexslider').flexslider({
 				  animation: "slide",
           pauseOnHover: true
 				});
+        $('#s2').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next2', 
+          prev:   '#prev2' 
+        });
+
+        $(".button_nav").click(function() {
+          $(".sf-menu").slideToggle();
+        })
 			 });
       
       function DropDown(el) {
@@ -149,23 +152,24 @@
       <div class="clearfix">
         <div class="grid_12">
           <nav>
-            	<ul class="sf-menu">
-                <li class="current sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Новости</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
-                  <ul class="sub_menu">
-                    <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
-                    <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
-                  </ul>
-                </li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Рассрочка</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Акции</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Вакансии</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Партнерам</a></li>
-                <li class="sf-menu_it"><a class="menu_link" href="#">Контакты</a></li>
-             </ul>
+            <a class="button_nav" href="#javascript;">МЕНЮ</a>
+          	<ul class="sf-menu">
+              <li class="sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
+              <li class="current sf-menu_it"><a class="menu_link" href="#">Новости</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
+                <ul class="sub_menu">
+                  <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
+                  <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
+                </ul>
+              </li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Рассрочка</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Акции</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Вакансии</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Партнерам</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Контакты</a></li>
+            </ul>
             <div class="clear"></div>
           </nav>
         </div>
