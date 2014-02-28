@@ -1248,6 +1248,7 @@ body.GBO_integration .description_box{
   /*accordion*/
 
   .GBO_title{
+    cursor: pointer;
     padding: 32px 0;
     text-align: center;
     font-size: 22px;
