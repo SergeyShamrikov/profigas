@@ -69,7 +69,7 @@ website:   	http://www.themepunch.com
 	font-size: 17px;
 	line-height: 1em;
 	font-weight: 500;
-	color: #fff;
+	color: #fff !important;
 }
 .slider1_it2{
 	font-size: 32px;
