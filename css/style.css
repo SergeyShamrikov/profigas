@@ -60,12 +60,12 @@ a:hover{
 
 }
 /*----------------------> Basic Classes <------------------*/
-.reg {text-transform:uppercase !important;}
-.f_left {float:left !important;}
-.f_right {float:right !important;}
-.al_right {text-align:right !important;}
-.al_left {text-align:left !important;}
-.al_center {text-align:center !important;}
+.reg {text-transform:uppercase;}
+.f_left {float:left;}
+.f_right {float:right;}
+.al_right {text-align:right;}
+.al_left {text-align:left;}
+.al_center {text-align:center;}
 
 .it{font-style:italic}
 .let{letter-spacing:-1px}
@@ -468,6 +468,22 @@ body.main #content{margin-top: 378px;}
 #content {padding:0px 0px 0px 0px;z-index: 99; position: relative;}
 .cont_pad{padding:0 0 0 0 !important;}
 .cost_box{padding-bottom: 33px;}
+  .slider1_it2,.slider1_it3{
+    width: 650px;
+    height: 40px;
+    top: -50px;
+    right: 0;
+    text-align: right;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #0c5288;
+  }
+  .cost_box_pointer{
+    top: -15px;
+    right: -100px;
+  }
+  .slider1_it2{top: -90px;}
 .cost_box_tab{
   width: 100%;
   border: 1px solid #3b86c4;
