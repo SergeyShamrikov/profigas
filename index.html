@@ -17,12 +17,13 @@
    <script src="js/modernizr.custom.79639.js"></script>
    <script src="js/easyResponsiveTabs.js"></script>
    <script src="js/jquery.equalheights.js"></script>
-   <script src="js/masonry.pkgd.min.js"></script>
+   <script src="js/jquery.isotope.min.js"></script>
    <script src="js/jquery.cycle2.js"></script>
    <script src="js/jquery.formstyler.min.js"></script>
    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 	 <script src="js/script.js"></script>
-	 <script>      
+	 <script>
+
 		  $(window).load(function() {
 				$('.flexslider').flexslider({
 				  animation: "slide",
@@ -30,6 +31,7 @@
 				});
         
         $('input, select').styler();
+
         $(".button_nav").click(function() {
           $(".sf-menu").slideToggle();
         })
@@ -89,15 +91,66 @@
        var dd = new DropDown( $('#dd6') );
        var dd = new DropDown( $('#dd7') );
 
+        
        $("#demoTab").easyResponsiveTabs({
             type: 'default', //Types: default, vertical, accordion           
             width: 'auto', //auto or any custom width
             fit: true,   // 100% fits in a container
             activate: function() {} // Callback function, gets called if tab is switched
         });
+
+        var $container = $('#container');
+        $(window).resize(function(){
+          $container.isotope({
+            itemSelector : '.news_it'
+          });
+        })
       
 });
+
     </script>
+    <!-- <script>
+        $(function(){
+        
+        var $container = $('#container');
+
+        $container.isotope({
+          itemSelector : '.element'
+        });
+        
+        
+        var $optionSets = $('#options .option-set'),
+            $optionLinks = $optionSets.find('a');
+
+        $optionLinks.click(function(){
+          var $this = $(this);
+          // don't proceed if already selected
+          if ( $this.hasClass('selected') ) {
+            return false;
+          }
+          var $optionSet = $this.parents('.option-set');
+          $optionSet.find('.selected').removeClass('selected');
+          $this.addClass('selected');
+    
+          // make option object dynamically, i.e. { filter: '.my-filter-class' }
+          var options = {},
+              key = $optionSet.attr('data-option-key'),
+              value = $this.attr('data-option-value');
+          // parse 'false' as false boolean
+          value = value === 'false' ? false : value;
+          options[ key ] = value;
+          if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+            // changes in layout modes need extra logic
+            changeLayoutMode( $this, options )
+          } else {
+            // otherwise, apply new options
+            $container.isotope( options );
+          }
+          
+          return false;
+
+        });
+    </script> -->
 	<!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -108,6 +161,10 @@
     <!--[if lt IE 9]>
    	<script src="js/html5.js"></script>
     	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+    <!--[if IE 9]>
+    <script src="js/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/ie9.css">
     <![endif]-->
 </head>
 <body class="main">
@@ -163,7 +220,7 @@
             <a class="button_nav" href="#javascript;">МЕНЮ</a>
           	<ul class="sf-menu">
               <li class="sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
-              <li class="current sf-menu_it"><a class="menu_link" href="#">Новости</a></li>
+              <li class="current sf-menu_it"><a class="menu_link" href="news.html">Новости</a></li>
               <li class="sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
               <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
               <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
@@ -791,42 +848,39 @@
         </div>
       </div>
     </div>
-    <div class="news_box">
-      <h3 class="title2"><a href="">Новости</a></h3>
-      <div class="clearfix js-masonry"
-  data-masonry-options='{ "columnWidth": 220, "itemSelector": ".news_it" }'>
-        <div class="news_it">
-          <figure class="video p_rel">
-            <img src="images/video_img.png" alt="">
-            <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
-          </figure>
-          <div class="news_cont">
-            <h4 class="title3">Установка ГБО</h4>
-            <a href="#" class="news_lk">Смотреть видео</a>
-          </div>
+    <h3 class="title2"><a href="news.html">Новости</a></h3>
+    <div id="container" class="news_box clearfix">
+      <div class="element news_it video_class">
+        <figure class="video p_rel">
+          <img src="images/video_img.png" alt="">
+          <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
+        </figure>
+        <div class="news_cont">
+          <h4 class="title3">Установка ГБО</h4>
+          <a href="#" class="news_lk">Смотреть видео</a>
         </div>
-        <div class="news_it">
-          <figure class="news p_rel">
-            <img src="images/news_img.png" alt="">
-            <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
-          </figure>
-          <div class="news_cont">
-            <h4 class="title3">Новая программа лояльности!</h4>
-            <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
-              <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
-            </p>
-            
-          </div>
+      </div>
+      <div class="element news_it news_class">
+        <figure class="news p_rel">
+          <img src="images/news_img.png" alt="">
+          <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+        </figure>
+        <div class="news_cont">
+          <h4 class="title3">Новая программа лояльности!</h4>
+          <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
+            <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+          </p>
+          
         </div>
-        <div class="news_it">
-          <figure class="photo p_rel">
-            <img src="images/photo_img.png" alt="">
-            <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
-          </figure>
-          <div class="news_cont">
-            <h4 class="title3">Audi A6 Allroad 2010</h4>
-            <a href="#" class="news_lk">Посмотреть галерею</a>
-          </div>
+      </div>
+      <div class="element news_it photo_class">
+        <figure class="photo p_rel">
+          <img src="images/photo_img.png" alt="">
+          <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
+        </figure>
+        <div class="news_cont">
+          <h4 class="title3">Audi A6 Allroad 2010</h4>
+          <a href="#" class="news_lk">Посмотреть галерею</a>
         </div>
       </div>
     </div>
@@ -939,6 +993,12 @@
   <script>
         $(document).ready(function() {
 
+        var $container = $('#container');
+        $(window).resize(function(){
+          $container.isotope({
+            itemSelector : '.element'
+          });
+        })
           var api = $('.fullwidthbanner').revolution(
             {
               delay:9000,

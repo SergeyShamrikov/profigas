@@ -4,7 +4,7 @@
 body.main #content{margin-top: 10px;}
 .fullwidthbanner-container{position: relative;}
 .grade_lk{font-size: 13px;}
-h1.logo{width: 100%;text-align: center;}
+h1.logo{width: 100%;text-align: center; float: none;}
 .sf-menu:after{width: 778px;}
 .additional_options{font-size: 13px;}
 
@@ -68,6 +68,14 @@ h1.logo{width: 100%;text-align: center;}
 .box3{width: 644px;}
 .gallery_car_it1{margin: 0 7px 14px 7px !important;}
 .GBO_title{font-size: 16px;}
+.news_it{width: 236px;}
+#options{bottom: 19px;}
+.filter_lk{padding: 4px 23px 5px 23px;}
+.filter_title{padding-top: 4px;}
+.grade{width: 314px; margin-left: 10px;}
+.title9{width: 120px;}
+.grade_it_box{width: 206px;}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -82,6 +90,7 @@ h1.logo{width: 100%;text-align: center;}
  nav{
  	padding: 10px 0;
  	margin: 0;
+ 	z-index: 1;
  }
  .menu_link{font-size: 20px;}
  .footer_menu{text-align: center;}
@@ -135,9 +144,9 @@ h1.logo{width: 100%;text-align: center;}
 		border-radius: 4px;
 	}
 	[aria-controls="tab_item-2"]{
-		-webkit-border-radius: 2px 2px 100px 100px;
-		-moz-border-radius: 2px 2px 100px 100px;
-		border-radius: 2px 2px 100px 100px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
 	}
 		.cost_lk{
 			text-align: center;
@@ -157,7 +166,7 @@ h1.logo{width: 100%;text-align: center;}
 		margin: 25px 0 10px 0px;
 	}
 #dd2, #dd3, #dd4, #dd5{margin: 0;}
-.box2{margin-bottom: 5px;}
+.box2{margin-bottom: 10px;}
 .cost_btm{float: right;}
 .title1 a{font-size: 26px;}
 .baner{display: none;}
@@ -239,6 +248,20 @@ h1.logo{width: 100%;text-align: center;}
 	 .mini_calculator{margin-top: 25px !important;}
 	 	.banner_box .calculator_lk{margin-right: 50px;padding-left: 30px;}
 .list2{padding-bottom: 0;}
+#options{left: 13px;bottom: 0;}
+	.news_it{width: 100%; margin-left: 0; margin-right:0;float: none;}
+	.filter_it{background: none;}
+	.filter_it:hover, .option-set .active{background: none;}
+		.filter_lk{
+			padding: 0;
+		}
+		.filter_it:hover .filter_lk,.option-set .active .filter_lk{color: #000;} 
+		.filter_title{padding: 0;}
+.grade_box{margin-left: 0;}
+.resp-tab-content-active {
+    padding: 20px;
+    background: #fff;
+}
 
 }
 
@@ -263,11 +286,14 @@ h1.logo{width: 100%;text-align: center;}
 
  .demo,.demo1{
  	height: 54px;
- 	display: inline-block;
+ 	display: block;
  	float: none;
  }
+ .wrapper-dropdown-3,#dd1{width: auto;}
+ #dd{z-index: 99992;}
  .tel_box,.social{float: none;}
- .social{margin-top: 10px;}
+ .tel_box{width: auto;text-align: center;margin-top: 0;}
+ .social{margin-top: 10px; padding-right: 0;text-align: center;}
 .cost_inp[type=text]{margin-left: 98px;}
  .quote_box{display: none;}
  .gallery_box{text-align: center;}
@@ -285,4 +311,6 @@ h1.logo{width: 100%;text-align: center;}
 .title9{float: none; line-height: 22px;}
 .gen_but{height: 47px;float: none;}
 #dd6, #dd7{width: auto;}
+#options{bottom: -45px;}
+body.news_page section#content{margin-top: 45px;}
 }

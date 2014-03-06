@@ -1,0 +1,2 @@
+.cost_it:hover, .resp-tab-active, .grade:hover .generation_title{filter: none;}
+.cost_it:hover .cost_lk:after, .resp-tab-active .cost_lk:after{background-image: url(../images/cost_it_hover_ie9.png) 0 0 no-repeat;}

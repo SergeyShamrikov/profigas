@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name = "format-detection" content = "telephone=no" />
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/filter.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    
+</head>
+<body class="news_page">
+
+<!--==============================header=================================-->
+    <header>
+	    <div class="container_12 header_top">
+	      <div class="clearfix">
+	        <div class="grid_12">
+	          <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
+	          <div class="header_box2 f_left">
+	            <div class="demo f_left">
+	              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+	                <span>Киев</span>
+	                <ul class="dropdown">
+	                  <li><a href="#">Киев</a></li>
+	                  <li><a href="#">Николаев</a></li>
+	                  <li><a href="#">Кривой рог</a></li>
+	                  <li><a href="#">Одесса</a></li>
+	                </ul>
+	              </div>
+	            ​</div>
+	            <div class="tel_box f_left">
+	              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+	              <a href="#" class="tel_lk">Заказать обратный звонок</a>
+	            </div>
+	            <div class="clear"></div>
+	          </div>
+	          <div class="header_box3 f_right">
+	            <div class="social f_left">
+	              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+	              <a class="fb" href="#"><i class="fb_icon"></i></a>
+	              <a class="tw" href="#"><i class="tw_icon"></i></a>
+	              <a class="g" href="#"><i class="g_icon"></i></a>
+	            </div>
+	            <div class="demo1 f_right">
+	              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+	                <span><i class="ru"></i>Рус</span>
+	                <ul class="dropdown">
+	                  <li><a href="#"><i class="en"></i>Англ</a></li>
+	                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+	                </ul>
+	              </div>
+	            ​</div>
+	            <div class="clear"></div>
+	          </div>
+	          <div class="clear"></div>
+	        </div>
+	      </div>
+	      <div class="clearfix">
+	        <div class="grid_12">
+	          <nav>
+	            <a class="button_nav" href="#javascript:;">МЕНЮ</a>
+	            <ul class="sf-menu">
+	              <li class="sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="news.html">Новости</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
+	              <li class="current sf-menu_it"><a class="menu_link" href="#">Услуги</a>
+	                <ul class="sub_menu">
+	                  <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
+	                  <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
+	                </ul>
+	              </li>
+	              <li class="sf-menu_it"><a class="menu_link" href="#">Рассрочка</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="#">Акции</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="#">Вакансии</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="#">Партнерам</a></li>
+	              <li class="sf-menu_it"><a class="menu_link" href="#">Контакты</a></li>
+	            </ul>
+	            <div class="clear"></div>
+	          </nav>
+	        </div>
+	      </div>
+
+	    <!-- breadcrumbs -->
+	    
+	        <div class="clearfix p_rel">
+	            <div class="grid_12">
+	                <ul class="breadcrumbs clearfix">
+	                    <li class="breadcrumbs_it">
+	                        <a class="breadcrumbs_lk breadcrumbs_first" href="#"><img src="images/breadcrumbs_first_img.png" alt=""><span>Главная <b>></b></span></a>
+	                    </li>
+	                    <li class="breadcrumbs_it">
+	                        <span class="breadcrumbs_lk breadcrumbs_last">Новости</span>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div id="options" class="clearfix p_abs">
+					<h6 class="filter_title">Категории:</h6>
+		            <ul id="filters" class="option-set clearfix" data-option-key="filter">
+				        <li class="filter_it active"><a href="#filter" data-option-value="*" class="selected filter_lk">Все</a></li>
+				        <li class="filter_it"><a href="#filter" class="filter_lk" data-option-value=".photo_class">Фотографии</a></li>
+				        <li class="filter_it"><a href="#filter" class="filter_lk" data-option-value=".video_class">Видео</a></li>
+				        <li class="filter_it"><a href="#filter" class="filter_lk" data-option-value=".news_class">Новости</a></li>
+				    </ul>
+				</div>
+	        </div>
+	    </div>
+	</header>
+
+	  <!--==============================content================================-->
+	<section  id="content">
+		<div class="container_12">
+			<h3 class="title2"><a href="javascript:;">Новости</a></h3>
+			<div id="container" class="news_box clearfix">
+		        <div class="element news_it video_class">
+		          <figure class="video p_rel">
+		            <img src="images/video_img.png" alt="">
+		            <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Установка ГБО</h4>
+		            <a href="#" class="news_lk">Смотреть видео</a>
+		          </div>
+		        </div>
+		        <div class="element news_it news_class">
+		          <figure class="news p_rel">
+		            <img src="images/news_img.png" alt="">
+		            <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Новая программа лояльности!</h4>
+		            <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
+		              <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+		            </p>
+		            
+		          </div>
+		        </div>
+		        <div class="element news_it photo_class">
+		          <figure class="photo p_rel">
+		            <img src="images/photo_img.png" alt="">
+		            <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Audi A6 Allroad 2010</h4>
+		            <a href="#" class="news_lk">Посмотреть галерею</a>
+		          </div>
+		        </div>
+		        <div class="element news_it news_class">
+		          <figure class="news p_rel">
+		            <img src="images/news_img1.png" alt="">
+		            <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">
+		            	Семинар-обучение от компании AC Spolka (STAG)
+					</h4>
+		            <p>Уважаемые клиенты, компания «Авто Газ Глобал Трейдинг» сообщает Вам, что в периодс 21 по 28  октября  2013 года в г.Киеве, г.Днепропетровске, г.Херсоне   и   г.Хмельницком<br>
+		              <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+		            </p>
+		            
+		          </div>
+		        </div>
+		        <div class="element news_it photo_class">
+		          <figure class="photo p_rel">
+		            <img src="images/photo_img1.png" alt="">
+		            <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Mazda CX-7</h4>
+		            <a href="#" class="news_lk">Посмотреть галерею</a>
+		          </div>
+		        </div>
+		        <div class="element news_it news_class">
+		          <figure class="news p_rel">
+		            <img src="images/news_img3.png" alt="">
+		            <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">
+		            	Выгодное предложение покупки комплектов Landi Renzo
+					</h4>
+		            <p>За доступную цену Вы можете приобрести комплекты премиум-класса  «Landi Renzo» c баллоном.<br>
+		              <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+		            </p>
+		          </div>
+		        </div>
+		        <div class="element news_it photo_class">
+		          <figure class="photo p_rel">
+		            <img src="images/photo_img2.png" alt="">
+		            <a href="#" class="p_abs news_icon photo_ic">ФОТОГРАФИИ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Фото-тур по СТО</h4>
+		            <a href="#" class="news_lk">Посмотреть галерею</a>
+		          </div>
+		        </div>
+		        <div class="element news_it news_class">
+		          <figure class="news p_rel">
+		            <img src="images/news_img4.png" alt="">
+		            <a href="#" class="p_abs news_icon news_ic">НОВОСТЬ</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">
+		            	Новогодние акции
+					</h4>
+		            <p>Заполните анкету на сайте и получите выгодные условия установки и обслуживания ГБО в сети СТО Профигаз.<br>
+		              <span class="likes">43 Лайков</span><span class="comtnts">53 Комментария</span>
+		            </p>
+		          </div>
+		        </div>
+		        <div class="element news_it video_class">
+		          <figure class="video p_rel">
+		            <img src="images/video_img1.png" alt="">
+		            <a href="#" class="p_abs news_icon video_ic">ВИДЕО</a>
+		          </figure>
+		          <div class="news_cont">
+		            <h4 class="title3">Подключение редуктора</h4>
+		            <a href="#" class="news_lk">Смотреть видео</a>
+		          </div>
+		        </div>
+		    </div>
+		    <p class="description_box">
+		      СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
+		    </p>
+		</div>
+
+	</section>
+	<!--==============================footer=================================-->
+	  <footer>
+	    <div class="container_12">
+	      <div class="wrapper">
+	        <div class="grid_12">
+	          <ul class="footer_menu clearfix">
+	            <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
+	            <li class="footer_item"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Вакансии</a></li>
+	            <li class="footer_item"><a href="#" class="footer_link">Контакты</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="footer_bottom">
+	      <div class="container_12">
+	        <div class="wrapper">
+	          <div class="grid_12">
+	            <b class="f_left">&copy; 2013 Профигаз. Все права защищены.</b>
+	            <span class="developer f_right">
+	              <a href="">Разработка сайта</a>
+	              <span class="name">Павел Грубый</span>
+	            </span>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </footer>
+
+
+    <script src="js/jquery.isotope.min.js"></script>
+	<script>
+
+	    $(function(){
+	      
+	      var $container = $('#container');
+
+	      $container.isotope({
+	        itemSelector : '.element'
+	      });
+	      $(".button_nav").click(function() {
+          $(".sf-menu").slideToggle();
+        })
+
+	      $(window).resize(function(){
+	      	$container.isotope({
+		        itemSelector : '.element'
+		      });
+	      })
+
+	      
+	      
+	      var $optionSets = $('#options .option-set'),
+	          $optionLinks = $optionSets.find('a');
+
+	      $optionLinks.click(function(){
+	        var $this = $(this);
+
+	        // don't proceed if already selected
+	        if ( $this.hasClass('active') ) {
+	          return false;
+	        }
+	        var $optionSet = $this.parents('.option-set');
+	        $optionSet.find('li').removeClass('active');
+	        $this.parent().addClass('active');
+	  
+	        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+	        var options = {},
+	            key = $optionSet.attr('data-option-key'),
+	            value = $this.attr('data-option-value');
+	        // parse 'false' as false boolean
+	        value = value === 'false' ? false : value;
+	        options[ key ] = value;
+	        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+	          // changes in layout modes need extra logic
+	          changeLayoutMode( $this, options )
+	        } else {
+	          // otherwise, apply new options
+	          $container.isotope( options );
+	        }
+	        
+	        return false;
+
+	      });
+			function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      };
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+        var dd = new DropDown( $('#dd1') );
+			
+	      });
+	    });
+  </script>
+    <!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+    <!--[if lt IE 9]>
+   	<script src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+    <!--[if IE 9]>
+    <script src="js/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/ie9.css">
+    <![endif]-->
+</body>
+</html>
