@@ -1536,7 +1536,8 @@ body.GBO_integration .description_box{
 .adress{
   text-align: center;
   font-size: 18px;
-  line-height: 47px;
+  line-height: 20px;
+  padding: 10px 0;
   color: #fff;
   background-color: #276da8;
   -webkit-border-radius: 5px 5px 0 0;
@@ -1587,6 +1588,22 @@ body.GBO_integration .description_box{
       margin-bottom: 30px;
     }
     .contact_it{margin-left: 5px;}
+  .schedule{
+    background: #dfdfdf;
+    text-align: center;
+    padding: 13px 0;
+    margin-bottom: 35px;
+    margin-top: 20px;
+  }
+  .schedule span{
+    display: inline-block;
+    height: 27px;
+    background: url(../images/schedule_bg.png) 0 0 no-repeat;
+    padding-left: 37px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #5f5f5f;
+  }
 /*=====================> Paragraphs ========================*/
 .pl5{margin-left: 5px;}
 

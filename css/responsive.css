@@ -76,6 +76,8 @@ h1.logo{width: 100%;text-align: center; float: none;}
 .title9{width: 120px;}
 .grade_it_box{width: 206px;}
 
+/*contacts*/
+.box5{padding-left: 167px;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -262,6 +264,8 @@ h1.logo{width: 100%;text-align: center; float: none;}
     padding: 20px;
     background: #fff;
 }
+/*contacts*/
+.box5{padding-left: 110px;}
 
 }
 
@@ -313,4 +317,7 @@ h1.logo{width: 100%;text-align: center; float: none;}
 #dd6, #dd7{width: auto;}
 #options{bottom: -45px;}
 body.news_page section#content{margin-top: 45px;}
+/*contacts*/
+.box5{padding-left: 30px;}
+
 }
