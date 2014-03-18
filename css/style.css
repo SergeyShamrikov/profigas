@@ -1526,6 +1526,67 @@ body.GBO_integration .description_box{
   #accordion{margin-bottom: 40px;}
   .box4{background: #ebebeb;}
 .banner1{margin-bottom: 25px;}
+
+
+/*======contacts========*/
+[class*="contact_icon"]{
+  width: 54px;
+  height: 40px;
+}
+.adress{
+  text-align: center;
+  font-size: 18px;
+  line-height: 47px;
+  color: #fff;
+  background-color: #276da8;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  margin-top: 15px;
+}
+  .adress span{color: #d6ecff;}
+  .tel2{width: 221px;}
+  .mail{width: 280px;}
+  .coordinates{width: 226px;}
+  .skype{width: 213px;}
+    .contact_icon1{
+      background: url(../images/contact_icon1.png) 0 0 no-repeat;
+    }
+    .contact_icon2{
+      background: url(../images/contact_icon2.png) 0 0 no-repeat;
+    }
+    .contact_icon3{
+      background: url(../images/contact_icon3.png) 0 0 no-repeat;
+    }
+    .contact_icon4{
+      background: url(../images/contact_icon4.png) 0 0 no-repeat;
+    }
+    .contact_it1{
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+      color: #747474;
+    }
+    .contact_it2{
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #505459;
+      display: inline-block;
+      margin-top: -12px;
+    }
+    .contact_it3{
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 700;
+      color: #505459;
+    }
+    #map_canvas{
+      width: 100%;
+      height: 320px;
+      margin-bottom: 30px;
+    }
+    .contact_it{margin-left: 5px;}
 /*=====================> Paragraphs ========================*/
 .pl5{margin-left: 5px;}
 
@@ -1536,7 +1597,7 @@ p {margin-bottom:18px}
 .p2{ margin-bottom:0;}
 .p3{ margin-bottom:120px;}
 .p4{ margin-bottom:35px;}
-.p5{ margin-bottom:0;}
+.p5{ margin-bottom:-7px;}
 .p6{ margin-bottom:0;}
 
 
@@ -1764,16 +1825,9 @@ a:hover{
 
 
 /*================================>> Contacts Info <<========================================*/
-#map_canvas {
-   width:411px;
-   height:237px;
-}
+
 .adress{}
-.adress span{
-  display:inline-block;
-  width:74px;
 }
-.adress dt{ margin-bottom:14px;}
 
 .demo{}
 .demo:hover{ text-decoration:underline;}

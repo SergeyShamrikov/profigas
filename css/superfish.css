@@ -5,7 +5,8 @@ nav{ position:relative; margin: 16px 0 0 0;padding-left: 7px;}
 
 .button_nav{display: none;}
 .sf-menu{
-	padding-top: 1px;	
+	padding-top: 1px;
+	display: block;
 }
 
 .sf-menu:after{
