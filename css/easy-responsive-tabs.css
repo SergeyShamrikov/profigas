@@ -117,3 +117,46 @@ h2.resp-accordion:first-child {
         border-bottom: 1px solid #c1c1c1 !important;
     }
 }
+/*======== GBO_integration ==========*/
+#Tab_GBO{margin-bottom: 35px !important;}
+#Tab_GBO .resp-tab-active,#Tab_GBO .resp-accordion:hover,#Tab_GBO .resp-accordion{background: none;position: relative;}
+.GBO_Tab_list{
+    width: 207px;
+    float: left;
+}
+.GBO_Tab_box{
+    float: left;
+    width: 680px;
+    padding: 36px;
+    margin-left: -20px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(191,191,189,0.75)
+}
+#Tab_GBO .resp-tabs-container {
+    clear: none;
+}
+    a[class^="GBO_Tab_list_it"]{
+        display: block;
+        font-size: 20px;
+        line-height: 24px;
+        color: #fff;
+        font-weight: 700;
+        padding: 32px 0 25px 30px;
+        margin-bottom: 2px;
+    }
+    .GBO_Tab_list_it1{
+        background: url(../images/GBO_title_bg1.png) 0 0 no-repeat;
+    }
+    .GBO_Tab_list_it2{
+        background: url(../images/GBO_title_bg2.png) 0 0 no-repeat;
+    }
+    a.GBO_Tab_list_it3{
+        background: url(../images/GBO_title_bg3.png) 0 0 no-repeat;
+        padding: 20px 0 19px 20px;
+    }
+    .GBO_Tab_list_it4{
+        background: url(../images/GBO_title_bg4.png) 0 0 no-repeat;
+    }
+    .GBO_Tab_list_it5{
+        background: url(../images/GBO_title_bg5.png) 0 0 no-repeat;
+    }

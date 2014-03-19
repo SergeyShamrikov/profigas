@@ -75,7 +75,9 @@ h1.logo{width: 100%;text-align: center; float: none;}
 .grade{width: 314px; margin-left: 10px;}
 .title9{width: 120px;}
 .grade_it_box{width: 206px;}
-
+.GBO_Tab_box{width: 508px;}
+.list3_it_text{width: 481px;}
+.grade_GBO_it{width: 162px;}
 /*contacts*/
 .box5{padding-left: 167px;}
 }
@@ -261,12 +263,36 @@ h1.logo{width: 100%;text-align: center; float: none;}
 		.filter_title{padding: 0;}
 .grade_box{margin-left: 0;}
 .resp-tab-content-active {
-    padding: 20px;
     background: #fff;
 }
+.resp-tab-content{padding: 20px;}
 /*contacts*/
 .box5{padding-left: 110px;}
-
+.GBO_Tab_box{background: none;width: auto;float: none;}
+a[class^="GBO_Tab_list_it"]{
+	-webkit-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	padding-left: 0;
+}
+.GBO_title{
+	margin-left: -20px;
+	padding-left: 20px;
+}
+.list3_it_text{width: 353px;}
+.grade_GBO_it{
+	width: auto;
+	float: none;
+	margin-left: 0;
+}
+.list3_it_text{width: 302px;}
+a[class^="GBO_Tab_list_it"]{margin-right: -20px;}
+#Tab_GBO h2.resp-accordion{
+	overflow: hidden;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
 }
 
 @media only screen and (max-width: 479px) {
@@ -319,5 +345,6 @@ h1.logo{width: 100%;text-align: center; float: none;}
 body.news_page section#content{margin-top: 45px;}
 /*contacts*/
 .box5{padding-left: 30px;}
+.list3_it_text{width: 182px;}
 
 }

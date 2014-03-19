@@ -69,7 +69,6 @@ a:hover{
 .al_right {text-align:right;}
 .al_left {text-align:left;}
 .al_center {text-align:center;}
-
 .it{font-style:italic}
 .let{letter-spacing:-1px}
 
@@ -1457,19 +1456,85 @@ body.GBO_integration .description_box{
   .more span{padding-left: 4px;}
   .make_logo{margin-right: 10px;}
 
-  /*accordion*/
-
+  /*GBO_integration*/
+#Tab_GBO  sup{
+  display: inline-block;
+  font-size: 12px;
+  margin-top: -4px;
+  text-transform: lowercase;
+}
   .GBO_title{
     cursor: pointer;
-    padding: 32px 0;
-    text-align: center;
-    font-size: 22px;
-    line-height: 24px;
+    margin-left: -36px;
+    padding-left: 36px;
+    background: #ebebeb;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 700;
-    color: #fff;
-    margin-top: 5px;
+    color: #1e1e1e;
+    text-transform: uppercase;
   }
-  .GBO_gen{
+  .number{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #dedede;
+    text-align: center;
+    width: 26px;
+  }
+  .list3_it_text{
+    font-size: 14px;
+    line-height: 16px;
+    color: #5f5f5f;
+    font-weight: 400;
+    padding-top: 2px;
+    width: 654px;
+    margin-bottom: 6px;
+  }
+  .text1{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #5f5f5f;
+    margin-bottom: 10px;
+  }
+  .grade_GBO{text-align: center;}
+  .grade_GBO_it{
+    width: 220px;
+    margin-left: 10px;
+  }
+  .grade_GBO_it:first-child{margin-left: 0;}
+    .grade_GBO_it dt{
+      background: #ebebeb;
+      color: #a4a4a4;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+    .grade_GBO_it dd{
+      font-size: 14px;
+      line-height: 18px;
+      color: #5f5f5f;
+      padding-bottom: 17px;
+    }
+    .grade_GBO_title{
+      font-size: 15px;
+      line-height: 18px;
+      color: #2967bd;
+      font-weight: 800;
+      padding-bottom: 5px;
+    }
+    .grade_GBO_title a{
+      color: #2967bd;
+      text-decoration: underline;
+    }
+    .grade_GBO_title a:hover{
+      text-decoration: none;
+    }
+    #Tab_GBO .resp-tab-active{
+      filter:none;
+    }
+  /*.GBO_gen{
     background:  url(../images/GBO_title1.png) 0 0 no-repeat;
     padding-left: 60px;
   }
@@ -1526,7 +1591,7 @@ body.GBO_integration .description_box{
   #accordion{margin-bottom: 40px;}
   .box4{background: #ebebeb;}
 .banner1{margin-bottom: 25px;}
-
+*/
 
 /*======contacts========*/
 [class*="contact_icon"]{
@@ -1638,7 +1703,7 @@ p {margin-bottom:18px}
   }
 .list2_link{}
 
-.list3{}
+.list3{padding-top: 10px;}
 .list3_item{
   background:url(../images/marker1.png) 0 7px no-repeat;
   padding-left:20px;
@@ -1726,6 +1791,14 @@ h2,h3,h4{
   font-weight: 400;
   color: #404040;
   float: left;
+}
+.title10{
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #5f5f5f;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 .t_ind{ margin-bottom:px;}
 .t_ind1{ margin-bottom:px;}

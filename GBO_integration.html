@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>GBO_integration</title>
+    <title>GBO integration</title>
     <meta name = "format-detection" content = "telephone=no" />
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.1.1.js"></script>
+   <script src="js/easyResponsiveTabs.js"></script>
     <script src="js/superfish.js"></script>
    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 	 <script src="js/jquery.easing.1.3.js"></script>
@@ -49,20 +50,23 @@
       };
 
       $(function() {
-
+          $("#Tab_GBO").easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any custom width
+            fit: true,   // 100% fits in a container
+            activate: function() {} // Callback function, gets called if tab is switched
+          });
         var dd = new DropDown( $('#dd') );
 
         $(document).click(function() {
           // all dropdowns
           $('.wrapper-dropdown-3').removeClass('active');
+           
         });
 
         var dd = new DropDown( $('#dd1') );
 
-        $( "#accordion" ).accordion({
-          header: "dt",
-          collapsible: true,
-        });
+        
         $(".button_nav").click(function() {
             $(".sf-menu").slideToggle();  
           })
@@ -177,471 +181,365 @@
   <!--==============================content================================-->
   <section>
     <div class="container_12">
-      <article>
-          <div class="grid_3">
-            <dl>
-              <dt class="GBO_title GBO_gen4">Прямой впрыск<i></i></dt>
-              <dd class="clearfix">
-                <ul class="list3">
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальный расход топлива, а, следовательно, существенная экономия
-                      </p>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальные потери мощности двигателя на газовом топливе
-                      </p>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Выполнение нормативов токсичности в соответствии с требованиями ЕВРО-2
-                      </p>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">4</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Отсутствие хлопков двигателя
-                      </p>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">5</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Стоимость системы такая же
-                      </p>
-                  </li>
-                </ul>
-              </dd>
-
-              <dt class="GBO_title GBO_princ">Принципы работы<i></i></dt>
-              <dd class="clearfix">
-                <p class="principles">
-                  <strong>GreenDieselGas iS</strong> - универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.<br>
-                  Система осуществляет распределенно-последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.<br>
-                  Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.
-                </p>
-              </dd>
-
-              <dt class="GBO_title GBO_grade">Комплектации<i></i></dt>
-              <dd class="clearfix">
-                <ul class="list">
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Базовая комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Люкс комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
+      
         <h2 class="title2">Установка ГБО</h2>
-        <div id="accordion" class="wrapper">
-          <div class="grid_3">
-            <dl>
-              <dt class="GBO_title GBO_gen4">4<sup>е</sup> поколение<i></i></dt>
-              <dd class="clearfix">
+         <div id="Tab_GBO" class="wrapper">          
+            <ul class="resp-tabs-list GBO_Tab_list">
+                <li><a href="#javascropt:;" class="GBO_Tab_list_it1">5<sup>e</sup> поколение</a></li>
+                <li><a href="#javascropt:;" class="GBO_Tab_list_it2">4<sup>e</sup> поколение</a></li>
+                <li><a href="#javascropt:;" class="GBO_Tab_list_it3">Прямой<br>впрыск</a></li>
+                <li><a href="#javascropt:;" class="GBO_Tab_list_it4">2<sup>e</sup> поколение</a></li>
+                <li><a href="#javascropt:;" class="GBO_Tab_list_it5">Газодизель</a></li>
+            </ul> 
+
+            <div class="resp-tabs-container GBO_Tab_box">                
+              <div class="">
+                <h3 class="GBO_title">5<sup>e</sup> поколение ГБО</h3>
                 <ul class="list3">
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальный расход топлива, а, следовательно, существенная экономия
-                      </p>
+                    <div class="number f_left">1</div>
+                    <p class="list3_it_text f_left">Высокая точность дозирования газового топлива,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальные потери мощности двигателя на газовом топливе
-                      </p>
+                    <div class="number f_left">2</div>
+                    <p class="list3_it_text f_left">Полностью автоматическое управление режимами работы системы и двигателя- от водителя не требуется никаких специальных навыков,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Выполнение нормативов токсичности в соответствии с требованиями ЕВРО-2
-                      </p>
+                    <div class="number f_left">3</div>
+                    <p class="list3_it_text f_left">Полное сохранение динамики при работе на газе,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">4</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Отсутствие хлопков двигателя
-                      </p>
+                    <div class="number f_left">4</div>
+                    <p class="list3_it_text f_left">Расход газа не более чем на 10% больше расхода бензина,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">5</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Стоимость системы такая же
-                      </p>
+                    <div class="number f_left">5</div>
+                    <p class="list3_it_text f_left">Отсутствие обратных хлопков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">6</div>
+                    <p class="list3_it_text f_left">Соответствие нормам токсичности ЕВРО-6,</p>
                   </li>
                 </ul>
-              </dd>
-
-              <dt class="GBO_title GBO_princ">Принципы работы<i></i></dt>
-              <dd class="clearfix">
-                <p class="principles">
-                  <strong>GreenDieselGas iS</strong> - универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.<br>
-                  Система осуществляет распределенно-последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.<br>
-                  Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.
-                </p>
-              </dd>
-
-              <dt class="GBO_title GBO_grade">Комплектации<i></i></dt>
-              <dd class="clearfix">
-                <ul class="list">
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Базовая комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Люкс комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-
-          </div>
-
-          <div class="grid_3">
-            <dl >
-              <dt class="GBO_title GBO_gen">2<sup>е</sup> поколение<i></i></dt>
-              <dd class="clearfix">
+                <h5 class="title10">Принцип работы</h5>
+                <p class="text1">Универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.</p>
+                <p class="text1">Система осуществляет распределенно -последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.</p>
+                <p class="text1">Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.</p>
+                <h5 class="title10">Принцип работы</h5>
+                <div class="grade_GBO wrapper">
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Премиум комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Люкс комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Системы LandiRenzo</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="GBO_title">4<sup>e</sup> поколение ГБО</h3>
                 <ul class="list3">
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальный расход топлива, а, следовательно, существенная экономия
-                      </p>
+                    <div class="number f_left">1</div>
+                    <p class="list3_it_text f_left">Высокая точность дозирования газового топлива,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальные потери мощности двигателя на газовом топливе
-                      </p>
+                    <div class="number f_left">2</div>
+                    <p class="list3_it_text f_left">Полностью автоматическое управление режимами работы системы и двигателя- от водителя не требуется никаких специальных навыков,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Выполнение нормативов токсичности в соответствии с требованиями ЕВРО-2
-                      </p>
+                    <div class="number f_left">3</div>
+                    <p class="list3_it_text f_left">Полное сохранение динамики при работе на газе,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">4</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Отсутствие хлопков двигателя
-                      </p>
+                    <div class="number f_left">4</div>
+                    <p class="list3_it_text f_left">Расход газа не более чем на 10% больше расхода бензина,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">5</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Стоимость системы такая же
-                      </p>
+                    <div class="number f_left">5</div>
+                    <p class="list3_it_text f_left">Отсутствие обратных хлопков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">6</div>
+                    <p class="list3_it_text f_left">Соответствие нормам токсичности ЕВРО-6,</p>
                   </li>
                 </ul>
-              </dd>
-
-              <dt class="GBO_title GBO_princ">Принципы работы<i></i></dt>
-              <dd class="clearfix">
-                <p class="principles">
-                  <strong>GreenDieselGas iS</strong> - универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.<br>
-                  Система осуществляет распределенно-последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.<br>
-                  Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.
-                </p>
-              </dd>
-
-              <dt class="GBO_title GBO_grade">Комплектации<i></i></dt>
-              <dd class="clearfix">
-                <ul class="list">
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Базовая комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Люкс комплектация ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                  <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
-                        <ul>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box4 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-
-          
-
-          <div class="grid_3">
-            <dl>
-              <dt class="GBO_title GBO_gas_diesel">Газодизель<i></i></dt>
-              <dd class="clearfix">
+                <h5 class="title10">Принцип работы</h5>
+                <p class="text1">Универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.</p>
+                <p class="text1">Система осуществляет распределенно -последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.</p>
+                <p class="text1">Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.</p>
+                <h5 class="title10">Принцип работы</h5>
+                <div class="grade_GBO wrapper">
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Премиум комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Люкс комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Системы LandiRenzo</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="GBO_title">Прямой впрыск</h3>
                 <ul class="list3">
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальный расход топлива, а, следовательно, существенная экономия
-                      </p>
+                    <div class="number f_left">1</div>
+                    <p class="list3_it_text f_left">Высокая точность дозирования газового топлива,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Минимальные потери мощности двигателя на газовом топливе
-                      </p>
+                    <div class="number f_left">2</div>
+                    <p class="list3_it_text f_left">Полностью автоматическое управление режимами работы системы и двигателя- от водителя не требуется никаких специальных навыков,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Выполнение нормативов токсичности в соответствии с требованиями ЕВРО-2
-                      </p>
+                    <div class="number f_left">3</div>
+                    <p class="list3_it_text f_left">Полное сохранение динамики при работе на газе,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">4</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Отсутствие хлопков двигателя
-                      </p>
+                    <div class="number f_left">4</div>
+                    <p class="list3_it_text f_left">Расход газа не более чем на 10% больше расхода бензина,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">5</div>
-                      <p class="gen_specification grid_3 alpha omega">
-                        Стоимость системы такая же
-                      </p>
+                    <div class="number f_left">5</div>
+                    <p class="list3_it_text f_left">Отсутствие обратных хлопков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">6</div>
+                    <p class="list3_it_text f_left">Соответствие нормам токсичности ЕВРО-6,</p>
                   </li>
                 </ul>
-              </dd>
-
-              <dt class="GBO_title GBO_princ">Принципы работы<i></i></dt>
-              <dd class="clearfix">
-                <p class="principles">
-                  <strong>GreenDieselGas iS</strong> - универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.<br>
-                  Система осуществляет распределенно-последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.<br>
-                  Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.
-                </p>
-              </dd>
-
-              <dt class="GBO_title GBO_grade">Комплектации<i></i></dt>
-              <dd class="clearfix">
-                <ul class="list">
+                <h5 class="title10">Принцип работы</h5>
+                <p class="text1">Универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.</p>
+                <p class="text1">Система осуществляет распределенно -последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.</p>
+                <p class="text1">Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.</p>
+                <h5 class="title10">Принцип работы</h5>
+                <div class="grade_GBO wrapper">
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Премиум комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Люкс комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Системы LandiRenzo</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="GBO_title">2<sup>e</sup> поколение ГБО</h3>
+                <ul class="list3">
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">1</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Базовая комплектация ></a>
-                        <ul>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="box2 wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="number f_left">1</div>
+                    <p class="list3_it_text f_left">Высокая точность дозирования газового топлива,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">2</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Люкс комплектация ></a>
-                        <ul>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="box2 wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="number f_left">2</div>
+                    <p class="list3_it_text f_left">Полностью автоматическое управление режимами работы системы и двигателя- от водителя не требуется никаких специальных навыков,</p>
                   </li>
                   <li class="wrapper list3_it">
-                      <div class="generation_tab grid_1 alpha omega">3</div>
-                      <div class="grid_3 alpha omega grade_box">
-                        <a href="#" class="grade_lk">Системы Landi-Renzo ></a>
-                        <ul>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">4 целиндра</div>
-                            <div class="f_right">5200 - 6900 грн</div>
-                          </li>
-                          <li class="box2 wrapper m_bot_zero">
-                            <div class="f_left">6 целиндра</div>
-                            <div class="f_right">7200 - 8500 грн</div>
-                          </li>
-                          <li class="box1 wrapper m_bot_zero">
-                            <div class="f_left">8 целиндра</div>
-                            <div class="f_right">8300 - 9300 грн</div>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="number f_left">3</div>
+                    <p class="list3_it_text f_left">Полное сохранение динамики при работе на газе,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">4</div>
+                    <p class="list3_it_text f_left">Расход газа не более чем на 10% больше расхода бензина,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">5</div>
+                    <p class="list3_it_text f_left">Отсутствие обратных хлопков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">6</div>
+                    <p class="list3_it_text f_left">Соответствие нормам токсичности ЕВРО-6,</p>
                   </li>
                 </ul>
-              </dd>
-            </dl>
-          </div>
-        </div>
+                <h5 class="title10">Принцип работы</h5>
+                <p class="text1">Универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.</p>
+                <p class="text1">Система осуществляет распределенно -последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.</p>
+                <p class="text1">Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.</p>
+                <h5 class="title10">Принцип работы</h5>
+                <div class="grade_GBO wrapper">
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Премиум комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Люкс комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Системы LandiRenzo</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="GBO_title">Газодизель</h3>
+                <ul class="list3">
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">1</div>
+                    <p class="list3_it_text f_left">Высокая точность дозирования газового топлива,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">2</div>
+                    <p class="list3_it_text f_left">Полностью автоматическое управление режимами работы системы и двигателя- от водителя не требуется никаких специальных навыков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">3</div>
+                    <p class="list3_it_text f_left">Полное сохранение динамики при работе на газе,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">4</div>
+                    <p class="list3_it_text f_left">Расход газа не более чем на 10% больше расхода бензина,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">5</div>
+                    <p class="list3_it_text f_left">Отсутствие обратных хлопков,</p>
+                  </li>
+                  <li class="wrapper list3_it">
+                    <div class="number f_left">6</div>
+                    <p class="list3_it_text f_left">Соответствие нормам токсичности ЕВРО-6,</p>
+                  </li>
+                </ul>
+                <h5 class="title10">Принцип работы</h5>
+                <p class="text1">Универсальная микропроцессорная система питания и регулирования, реализующуя газодизельный процесс на транспортных ДВС средней мощности в соответствии с современными экологическими требованиями к выбросам вредных веществ.</p>
+                <p class="text1">Система осуществляет распределенно -последовательный (фазированный) впрыск газового топлива (СПГ) непосредственно к впускным клапанам газодизеля.</p>
+                <p class="text1">Система состоит из электронного блока управления, комплекта датчиков и исполнительных устройств.</p>
+                <h5 class="title10">Принцип работы</h5>
+                <div class="grade_GBO wrapper">
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Премиум комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Люкс комплектация</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                  <div class="f_left grade_GBO_it">
+                    <h6 class="grade_GBO_title"><a href="#">Системы LandiRenzo</a> ></h6>
+                    <dl>
+                      <dt>4 целиндра</dt>
+                      <dd>5200-6900 грн</dd>
+                      <dt>6 целиндра</dt>
+                      <dd>7200-8500 грн</dd>
+                      <dt>8 целиндра</dt>
+                      <dd>8300-9300 грн</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
         <div class="wrapper banner1">
           <div class="grid_4">
             <div class="m_top_zero mini_calculator banner_box">
@@ -721,7 +619,6 @@
         <p class="description_box">
           СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
         </p>
-      </article>
     </div>
   </section>
 

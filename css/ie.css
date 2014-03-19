@@ -1,3 +1,5 @@
 .scheme img,.wrapper-dropdown-3,.wrapper-dropdown-3 .dropdown,.wrapper-dropdown-3 .dropdown li:first-of-type a,.wrapper-dropdown-3 .dropdown li:last-of-type a,
 .social a,.cost_box_tab,.cost_it,.cost_btn_lk,.cost_inp[type=text],.quote_box,.news_it,.gallery_box_sub_it img,
 .scheme img,.box_photo img,.gallery_car_it img,.calculator_lk,.reviews,.more{behavior:url(js/PIE.htc);position:relative;}
+.wrapper-dropdown-3 .dropdown{display: none;}
+.wrapper-dropdown-3.active .dropdown{display: block;}
