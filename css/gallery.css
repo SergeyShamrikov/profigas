@@ -1,0 +1,53 @@
+.gallery_cars{
+	margin-left: -7px;
+}
+.logo_box{
+	float: left;
+	width: 155px;
+	padding: 15px 10px 10px;
+	text-align: center;
+	background-color: #fff;
+	margin:0 7px 15px 7px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.logo_cars{
+	width: auto;
+	height: 115px;
+	margin-bottom: 15px;
+}
+.logo_cars:after{
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+.logo_cars img{
+	width: auto;
+	vertical-align: middle;
+}
+.logo_cars_lk{
+	font-size: 20px;
+	line-height: 29px;
+	color: #0c5288;
+	text-decoration: underline;
+}
+.logo_cars_lk:hover{
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 995px) {
+ body{min-width:768px;}
+ .logo_box{width: 154px;}
+ }
+ @media only screen and (max-width: 767px) {
+ body{min-width:420px;}
+ .logo_box{width: 175px;}
+ .gallery_cars{margin: 0;}
+}
+@media only screen and (max-width: 479px) {
+ body{min-width:300px;}
+.logo_box{float: none;width: auto;}
+ }

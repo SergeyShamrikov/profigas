@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <meta name = "format-detection" content = "telephone=no" />
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/superfish.js"></script>
+	 <script src="js/jquery.flexslider.js"></script>
+	 <script src="js/jquery.easing.1.3.js"></script>
+   <script src="js/modernizr.custom.79639.js"></script>
+   <script src="js/jquery.cycle2.js"></script>
+
+   <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	 <script src="js/script.js"></script>
+   <script>
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+        var dd = new DropDown( $('#dd1') );
+        });
+      $('#s2').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next2', 
+          prev:   '#prev2' 
+      });
+      $('#s3').cycle({ 
+          fx:     'scrollDown', 
+          speed:  'slow', 
+          timeout: 0, 
+          next:   '#next3', 
+          prev:   '#prev3' 
+      });
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          animation: "slide",
+          pauseOnHover: true
+        });
+        $(".button_nav").click(function() {
+          $(".sf-menu").slideToggle();
+        })
+       });
+      
+    </script>
+  <!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body class="gallery_main">
+  <!--==============================header=================================-->
+  <header>
+    <div class="container_12 header_top">
+      <div class="clearfix">
+        <div class="grid_12">
+          <h1 class="logo f_left"><a href="index.html">Profigas мережа автогазовых СТО</a></h1>
+          <div class="header_box2 f_left">
+            <div class="demo f_left">
+              <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                <span>Киев</span>
+                <ul class="dropdown">
+                  <li><a href="#">Киев</a></li>
+                  <li><a href="#">Николаев</a></li>
+                  <li><a href="#">Кривой рог</a></li>
+                  <li><a href="#">Одесса</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="tel_box f_left">
+              <p class="tel hel"><i class="tel_icon"></i>0 800 505 00 17</p>
+              <a href="#" class="tel_lk">Заказать обратный звонок</a>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="header_box3 f_right">
+            <div class="social f_left">
+              <a class="sk" href="#"><i class="sk_icon"></i>Позвонить</a>
+              <a class="fb" href="#"><i class="fb_icon"></i></a>
+              <a class="tw" href="#"><i class="tw_icon"></i></a>
+              <a class="g" href="#"><i class="g_icon"></i></a>
+            </div>
+            <div class="demo1 f_right">
+              <div id="dd1" class="wrapper-dropdown-3" tabindex="1">
+                <span><i class="ru"></i>Рус</span>
+                <ul class="dropdown">
+                  <li><a href="#"><i class="en"></i>Англ</a></li>
+                  <li><a href="#"><i class="ru"></i>Рус</a></li>
+                </ul>
+              </div>
+            ​</div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clearfix">
+        <div class="grid_12">
+          <nav>
+            <a class="button_nav" href="#javascript:;">МЕНЮ</a>
+            <ul class="sf-menu">
+              <li class="sf-menu_it"><a class="menu_link" href="index.html">Главная</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="news.html">Новости</a></li>
+              <li class="current sf-menu_it"><a class="menu_link" href="gallery.html">Галерея</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="about.html">Наше все</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Услуги</a>
+                <ul class="sub_menu">
+                  <li class="sub_menu_item"><a href="GBO_integration.html" class="sub_menu_link">Установка ГБО</a></li>
+                  <li class="sub_menu_item"><a href="#" class="sub_menu_link">Сервис ГБО</a></li>
+                </ul>
+              </li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Рассрочка</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Акции</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Вакансии</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Партнерам</a></li>
+              <li class="sf-menu_it"><a class="menu_link" href="#">Контакты</a></li>
+            </ul>
+            <div class="clear"></div>
+          </nav>
+        </div>
+      </div>
+
+    <!-- breadcrumbs -->
+    
+        <div class="clearfix">
+            <div class="grid_12">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs_it">
+                        <a class="breadcrumbs_lk breadcrumbs_first" href="#"><img src="images/breadcrumbs_first_img.png" alt=""><span>Главная <b>></b></a>
+                    </li>
+                    <li class="breadcrumbs_it">
+                        <span class="breadcrumbs_lk breadcrumbs_last">Галерея</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <!--==============================content================================-->
+  <section>
+    <div class="container_12 wrapper">
+      <h2 class="title2">Популярные модели автомобилей с ГБО</h2>
+      <div class="grid_12">
+        <div class="gallery_cars wrapper">
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img1.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Acura</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img2.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Audi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img3.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">BMW</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img4.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img5.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img6.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Infiniti</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img7.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">KIA</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img8.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Lexus</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img9.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mazda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img10.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mercedes-Benz</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img11.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mitsubishi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img12.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Nissan</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img13.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Opel</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img14.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Renault</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img15.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Seat</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img16.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Skoda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img1.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Acura</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img2.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Audi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img3.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">BMW</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img4.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img1.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Acura</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img2.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Audi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img3.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">BMW</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img4.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img5.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img6.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Infiniti</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img7.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">KIA</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img8.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Lexus</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img9.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mazda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img10.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mercedes-Benz</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img11.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Mitsubishi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img12.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Nissan</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img13.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Opel</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img14.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Renault</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img15.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Seat</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img16.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Skoda</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img1.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Acura</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img2.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Audi</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img3.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">BMW</a>
+          </div>
+          <div class="logo_box">
+            <figure class="logo_cars">
+              <img src="images/logo_cars_img4.png" alt="">
+            </figure>
+            <a href="#" class="logo_cars_lk">Honda</a>
+          </div>
+        </div>
+      </div>
+      <p class="description_box">
+        СТО Профигаз – это самые передовые, качественные, организационные и технические ноу-хау в сфере переоборудования автомобилей на газ. Мы сотрудничаем с ведущими европейскими компаниями-производителями ГБО, такими как: AC (Stag), TOMASETTO ACHILLE, ATIKER, BIGAS, VALTEK, RAIL, LECHO, VITKOVICE MILMET, RYBACKI, FLASH LUBE, EMER. На нашей станции технического обслуживания Вас встретят профессионалы своего дела, которые помогут выбрать и установят самый оптимальный, подходящий именно Вашему автомобилю комплект газобаллонного оборудования. Вас приятно удивит цена наших услуг. Ведь мы являемся прямым импортером ГБО, поэтому ценовая политика СТО «Профигаз» наиболее лояльна по отношению к клиенту.
+      </p>
+    </div>
+  </section>
+  <!--==============================footer=================================-->
+  <footer>
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_12">
+          <ul class="footer_menu clearfix">
+            <li class="footer_item"><a href="#" class="footer_link">Главная</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Наше все</a></li>
+            <li class="footer_item"><a href="GBO_integration.html" class="footer_link">Установка ГБО</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Сервис ГБО</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Рассрочка</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Акции</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Вакансии</a></li>
+            <li class="footer_item"><a href="#" class="footer_link">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container_12">
+        <div class="wrapper">
+          <div class="grid_12">
+            <b class="f_left">&copy; 2013 Профигаз. Все права защищены.</b>
+            <span class="developer f_right">
+              <a href="">Разработка сайта</a>
+              <span class="name">Павел Грубый</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
